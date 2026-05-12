@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whale Watching & Marine Eco-Tours | Home</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-whale"></i>
+                    <span>MarineTours</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="home-2.html">Home 2</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                    <button id="darkModeToggle" class="toggle-btn"><i class="fas fa-moon"></i></button>
+                    <button id="rtlToggle" class="toggle-btn"><i class="fas fa-language"></i></button>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-home-1" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1550951160-843e936b9c97?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center; color: white;">
+        <div class="container">
+            <div class="hero-content reveal">
+                <h1 style="font-size: 4rem; margin-bottom: 20px; line-height: 1.1;">Witness the Giants <br> of the Deep</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 600px;">Experience the majesty of whale watching with the pioneers of marine eco-tourism. Sustainable, educational, and unforgettable.</p>
+                <div class="hero-btns">
+                    <a href="services.html" class="btn btn-accent">Book Your Tour</a>
+                    <a href="about.html" class="btn btn-glass" style="margin-left: 20px; border: 1px solid white;">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="wave-divider" style="position: absolute; bottom: 0; width: 100%;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f0f8ff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,149.3C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+    </section>
+
+    <!-- Seasonal Species Calendar -->
+    <section class="species-calendar" style="padding: var(--section-padding);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Seasonal Species Calendar</h2>
+                <p>Track the migration and spotting opportunities of our marine friends.</p>
+            </div>
+            <div class="calendar-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <!-- Cards here -->
+                <div class="calendar-card reveal" style="background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: var(--shadow);">
+                    <i class="fas fa-calendar-alt" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
+                    <h3>Jan - Mar</h3>
+                    <p>Humpback Migration</p>
+                </div>
+                <div class="calendar-card reveal" style="background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: var(--shadow);">
+                    <i class="fas fa-calendar-alt" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
+                    <h3>Apr - Jun</h3>
+                    <p>Dolphin Calf Season</p>
+                </div>
+                <div class="calendar-card reveal" style="background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: var(--shadow);">
+                    <i class="fas fa-calendar-alt" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
+                    <h3>Jul - Sep</h3>
+                    <p>Blue Whale Sightings</p>
+                </div>
+                <div class="calendar-card reveal" style="background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: var(--shadow);">
+                    <i class="fas fa-calendar-alt" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
+                    <h3>Oct - Dec</h3>
+                    <p>Gray Whale Passage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marine Adventure Cards (4) -->
+    <section class="adventures" style="padding: var(--section-padding); background: white;">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Marine Adventures</h2>
+                <p>Choose your perfect ocean experience.</p>
+            </div>
+            <div class="card-grid">
+                <div class="card reveal">
+                    <div class="card-img"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=600" alt="Group Tour"></div>
+                    <div class="card-body">
+                        <h3>Group Eco-Tours</h3>
+                        <p>Join a shared expedition led by marine biologists to witness whales in their natural habitat.</p>
+                        <a href="services-details.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <div class="card-img"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=600" alt="Sunset Cruise"></div>
+                    <div class="card-body">
+                        <h3>Sunset Dolphin Cruise</h3>
+                        <p>Enjoy a magical evening on the water as dolphins play in the golden wake of our eco-yacht.</p>
+                        <a href="services-details.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <div class="card-img"><img src="https://images.unsplash.com/photo-1520110120385-ad276ae77215?auto=format&fit=crop&q=80&w=600" alt="Family Trip"></div>
+                    <div class="card-body">
+                        <h3>Family Ocean Discovery</h3>
+                        <p>An educational journey perfect for all ages, featuring interactive touch pools and hydrophone listening.</p>
+                        <a href="services-details.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <div class="card-img"><img src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e?auto=format&fit=crop&q=80&w=600" alt="Private Yacht"></div>
+                    <div class="card-body">
+                        <h3>Private Yacht Charter</h3>
+                        <p>Tailored luxury expeditions for private groups looking for an exclusive marine adventure.</p>
+                        <a href="services-details.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vessel Showcase -->
+    <section class="vessels" style="padding: var(--section-padding);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Our Premium Fleet</h2>
+                <p>Modern, eco-friendly vessels designed for comfort and optimal viewing.</p>
+            </div>
+            <div class="vessel-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="vessel-item reveal" style="position: relative; overflow: hidden; border-radius: 15px; height: 400px;">
+                    <img src="https://images.unsplash.com/photo-1567891740298-2b083b9e4a30?auto=format&fit=crop&q=80&w=800" style="width:100%; height:100%; object-fit:cover;">
+                    <div class="vessel-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 30px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                        <h3>The Blue Horizon</h3>
+                        <p>Eco-Hybrid Catamaran | 60 Passengers</p>
+                    </div>
+                </div>
+                <div class="vessel-item reveal" style="position: relative; overflow: hidden; border-radius: 15px; height: 400px;">
+                    <img src="https://images.unsplash.com/photo-1544552866-d3ed42536cfd?auto=format&fit=crop&q=80&w=800" style="width:100%; height:100%; object-fit:cover;">
+                    <div class="vessel-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 30px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                        <h3>Ocean Whisper</h3>
+                        <p>Electric Explorer | 30 Passengers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hydrophone Experience -->
+    <section class="hydrophone" style="padding: var(--section-padding); background: var(--primary-color); color: white;">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2 style="color: white;">Listen to the Deep</h2>
+                <p>Experience the mesmerizing songs of whales via our advanced hydrophones.</p>
+            </div>
+            <div class="audio-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div class="audio-card glass reveal" style="padding: 30px; text-align: center;">
+                    <i class="fas fa-volume-up" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                    <h3>Humpback Song</h3>
+                    <p>Recorded off the coast of Maui</p>
+                    <button class="btn btn-accent" style="margin-top: 20px;">Play Sample</button>
+                </div>
+                <div class="audio-card glass reveal" style="padding: 30px; text-align: center;">
+                    <i class="fas fa-volume-up" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                    <h3>Orca Clicks</h3>
+                    <p>Recorded in the North Sea</p>
+                    <button class="btn btn-accent" style="margin-top: 20px;">Play Sample</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Premium Ocean Experience -->
+    <section class="premium-experience" style="padding: 100px 0; background: #f0f8ff; position: relative; overflow: hidden;">
+        <div class="container">
+            <div class="exp-layout" style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
+                <div class="exp-text reveal" style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 3rem; margin-bottom: 20px;">A New Depth of Discovery</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 30px; color: var(--light-text);">We don't just show you whales; we immerse you in their world. Our tours are designed to be low-impact and high-engagement.</p>
+                    <div class="stats-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="15" style="font-size: 2.5rem; font-weight: 700; color: var(--secondary-color);">0</span>
+                            <span style="font-size: 1.5rem; color: var(--secondary-color);">+</span>
+                            <p>Years of Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="98" style="font-size: 2.5rem; font-weight: 700; color: var(--secondary-color);">0</span>
+                            <span style="font-size: 1.5rem; color: var(--secondary-color);">%</span>
+                            <p>Sighting Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="exp-image reveal" style="flex: 1; min-width: 300px; position: relative;">
+                    <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=800" style="border-radius: 20px; box-shadow: 20px 20px 0 var(--secondary-color);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#001F3F" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,192C672,213,768,203,864,181.3C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="logo"><i class="fas fa-whale"></i> MarineTours</h3>
+                    <p>Pioneering sustainable marine tourism for over 15 years. Join us in protecting our oceans.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Tours</a></li>
+                        <li><a href="blog.html">Latest News</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Tour Timings</h3>
+                    <ul>
+                        <li>Morning: 08:00 AM</li>
+                        <li>Midday: 12:00 PM</li>
+                        <li>Sunset: 04:30 PM</li>
+                        <li>Private: Flexible</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Get updates on sightings and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-accent"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Whale Watching & Marine Eco-Tours. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: var(--accent-color);"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

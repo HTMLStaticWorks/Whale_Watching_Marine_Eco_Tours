@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Whale Watching & Marine Eco-Tours</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .register-card {
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+        .register-card input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+        .register-card input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        .register-card .logo {
+            justify-content: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+        .password-strength {
+            height: 5px;
+            background: rgba(255,255,255,0.1);
+            margin-bottom: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: left;
+        }
+        .strength-bar {
+            height: 100%;
+            width: 0%;
+            background: var(--secondary-color);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-card glass reveal">
+        <a href="index.html" class="logo">
+            <i class="fas fa-whale"></i>
+            <span>MarineTours</span>
+        </a>
+        <h2 style="color: white; margin-bottom: 20px;">Join the Expedition</h2>
+        <form action="dashboard.html">
+            <div style="display: flex; gap: 10px;">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" id="password" placeholder="Password" required oninput="checkStrength(this.value)">
+            <div class="password-strength">
+                <div id="strength-bar" class="strength-bar"></div>
+            </div>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit" class="btn btn-accent" style="width: 100%;">Create Account</button>
+        </form>
+        <p style="margin-top: 20px; font-size: 0.9rem;">Already have an account? <a href="login.html" style="color: var(--secondary-color);">Login Here</a></p>
+    </div>
+
+    <script>
+        function checkStrength(password) {
+            let strength = 0;
+            if (password.length > 5) strength += 25;
+            if (password.match(/[a-z]/) && password.match(/[A-Z]/)) strength += 25;
+            if (password.match(/[0-9]/)) strength += 25;
+            if (password.match(/[^a-zA-Z0-9]/)) strength += 25;
+            
+            const bar = document.getElementById('strength-bar');
+            bar.style.width = strength + '%';
+            if (strength < 50) bar.style.background = '#ff4d4d';
+            else if (strength < 75) bar.style.background = '#ffd11a';
+            else bar.style.background = '#00ff00';
+        }
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

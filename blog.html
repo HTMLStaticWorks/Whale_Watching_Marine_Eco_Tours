@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Blog | Whale Watching & Marine Eco-Tours</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-whale"></i>
+                    <span>MarineTours</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="home-2.html">Home 2</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                    <button id="darkModeToggle" class="toggle-btn"><i class="fas fa-moon"></i></button>
+                    <button id="rtlToggle" class="toggle-btn"><i class="fas fa-language"></i></button>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=2000'); padding: 100px 0; color: white; text-align: center;">
+        <div class="container reveal">
+            <h1 style="font-size: 3.5rem; color: white;">Marine Insights</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto;">Deep dives into ocean conservation, wildlife stories, and travel tips.</p>
+        </div>
+    </section>
+
+    <!-- Featured Marine Articles (4 cards) -->
+    <section class="featured-articles" style="padding: var(--section-padding);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Latest Stories</h2>
+                <p>Stay updated with our latest expeditions and research.</p>
+            </div>
+            <div class="card-grid">
+                <div class="card reveal">
+                    <div class="card-img"><img src="https://images.unsplash.com/photo-1550951160-843e936b9c97?auto=format&fit=crop&q=80&w=600"></div>
+                    <div class="card-body">
+                        <h3>Humpback Migration 2026</h3>
+                        <p>Everything you need to know about this year's incredible migration patterns.</p>
+                        <a href="blog-details.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <div class="card-img"><img src="https://images.unsplash.com/photo-1520110120385-ad276ae77215?auto=format&fit=crop&q=80&w=600"></div>
+                    <div class="card-body">
+                        <h3>The Secret Language of Orcas</h3>
+                        <p>How our team uses hydrophones to understand complex orca communications.</p>
+                        <a href="blog-details.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <div class="card-img"><img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=600"></div>
+                    <div class="card-body">
+                        <h3>Plastic-Free Oceans</h3>
+                        <p>Simple steps you can take to help reduce marine pollution and protect sea life.</p>
+                        <a href="blog-details.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <div class="card-img"><img src="https://images.unsplash.com/photo-1454486840607-adc8b4bc1da0?auto=format&fit=crop&q=80&w=600"></div>
+                    <div class="card-body">
+                        <h3>The Blue Whale: A Recovery Story</h3>
+                        <p>Tracking the positive growth in blue whale populations in our local waters.</p>
+                        <a href="blog-details.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ocean Conservation News -->
+    <section class="conservation-news" style="padding: var(--section-padding); background: var(--bg-light);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Conservation News</h2>
+                <p>Global updates on marine protected areas and policies.</p>
+            </div>
+            <div class="news-list" style="max-width: 900px; margin: 0 auto;">
+                <div class="news-item reveal" style="display: flex; gap: 30px; margin-bottom: 40px; background: white; padding: 30px; border-radius: 15px; box-shadow: var(--shadow);">
+                    <div style="flex: 0 0 100px; text-align: center; border-right: 2px solid var(--secondary-color); padding-right: 20px;">
+                        <h4 style="font-size: 2rem; color: var(--secondary-color);">12</h4>
+                        <p>MAY</p>
+                    </div>
+                    <div>
+                        <h3>New Marine Reserve Announced</h3>
+                        <p style="color: var(--light-text);">A massive new protected area has been established to safeguard humpback breeding grounds.</p>
+                        <a href="#" style="color: var(--secondary-color); font-weight: 600;">Read Full Report <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Tips -->
+    <section class="travel-tips" style="padding: var(--section-padding);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Explorer's Guide</h2>
+                <p>Tips for making the most of your marine adventure.</p>
+            </div>
+            <div class="tips-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="tip-card reveal" style="display: flex; gap: 20px; align-items: center;">
+                    <i class="fas fa-camera" style="font-size: 2.5rem; color: var(--secondary-color);"></i>
+                    <div>
+                        <h4>Photography Gear</h4>
+                        <p>Best settings for capturing whales in motion.</p>
+                    </div>
+                </div>
+                <div class="tip-card reveal" style="display: flex; gap: 20px; align-items: center;">
+                    <i class="fas fa-pills" style="font-size: 2.5rem; color: var(--secondary-color);"></i>
+                    <div>
+                        <h4>Sea Sickness</h4>
+                        <p>Natural remedies for a smooth journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="newsletter-cta" style="padding: 100px 0; background: var(--primary-color); color: white; text-align: center;">
+        <div class="container reveal">
+            <h2 style="color: white; margin-bottom: 20px;">Never Miss a Sighting</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">Join our community of over 50,000 marine enthusiasts.</p>
+            <form class="newsletter-form" style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px;">
+                <input type="email" placeholder="Your Email Address" required style="flex: 1; padding: 15px; border-radius: 5px; border: none;">
+                <button type="submit" class="btn btn-accent">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#001F3F" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,192C672,213,768,203,864,181.3C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="logo"><i class="fas fa-whale"></i> MarineTours</h3>
+                    <p>Pioneering sustainable marine tourism for over 15 years. Join us in protecting our oceans.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Tours</a></li>
+                        <li><a href="blog.html">Latest News</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Tour Timings</h3>
+                    <ul>
+                        <li>Morning: 08:00 AM</li>
+                        <li>Midday: 12:00 PM</li>
+                        <li>Sunset: 04:30 PM</li>
+                        <li>Private: Flexible</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Get updates on sightings and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-accent"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Whale Watching & Marine Eco-Tours. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: var(--accent-color);"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

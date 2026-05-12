@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Lost at Sea | Whale Watching & Marine Eco-Tours</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-light);
+            text-align: center;
+            overflow: hidden;
+        }
+        .error-whale {
+            font-size: 8rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-30px) rotate(10deg); }
+        }
+        .bubble {
+            position: absolute;
+            background: rgba(0, 168, 204, 0.2);
+            border-radius: 50%;
+            animation: bubbleUp 5s linear infinite;
+        }
+        @keyframes bubbleUp {
+            0% { transform: translateY(100vh); opacity: 1; }
+            100% { transform: translateY(-100px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bubble" style="width: 20px; height: 20px; left: 20%; animation-delay: 0s;"></div>
+    <div class="bubble" style="width: 40px; height: 40px; left: 40%; animation-delay: 2s;"></div>
+    <div class="bubble" style="width: 15px; height: 15px; left: 70%; animation-delay: 1s;"></div>
+    <div class="bubble" style="width: 30px; height: 30px; left: 85%; animation-delay: 3s;"></div>
+
+    <div class="container">
+        <div class="error-whale"><i class="fas fa-whale"></i></div>
+        <h1 style="font-size: 6rem; margin-bottom: 10px;">404</h1>
+        <h2 style="margin-bottom: 20px;">You've Drifted Too Far!</h2>
+        <p style="color: var(--light-text); margin-bottom: 40px; max-width: 500px; margin-inline: auto;">The page you are looking for has dived into the deep blue or never existed in the first place.</p>
+        <a href="index.html" class="btn btn-primary">Navigate Back Home</a>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
