@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/png" href="assets/images/website-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -15,23 +16,22 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">
-                    <i class="fas fa-whale"></i>
-                    <span>MarineTours</span>
-                </a>
+                <a href="index.html" class="logo"><img src="assets/images/website-logo.png" alt="Logo" style="height: 40px;"><span>MarineTours</span></a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home 1</a></li>
                     <li><a href="home-2.html">Home 2</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="tour.html">Tour</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li class="nav-action-items">
+                        <button id="darkModeToggle" class="toggle-btn"><i class="fas fa-moon"></i></button>
+                        <button id="rtlToggle" class="toggle-btn"><i class="fas fa-right-left"></i></button>
+                        <a href="login.html" class="btn btn-primary">Login</a>
+                    </li>
                 </ul>
                 <div class="nav-actions">
-                    <a href="login.html" class="btn btn-primary">Login</a>
-                    <button id="darkModeToggle" class="toggle-btn"><i class="fas fa-moon"></i></button>
-                    <button id="rtlToggle" class="toggle-btn"><i class="fas fa-language"></i></button>
                     <div class="hamburger">
                         <span></span>
                         <span></span>
@@ -42,11 +42,24 @@
         </div>
     </header>
 
-    <!-- Detailed Service Hero -->
-    <section class="service-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1550951160-843e936b9c97?auto=format&fit=crop&q=80&w=2000'); padding: 150px 0; color: white; text-align: center;">
+    <section id="hero-section" class="service-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/Humpback Safari.png.jpg'); padding: 160px 0; color: white; text-align: center;">
         <div class="container reveal">
-            <h1 style="font-size: 4rem; color: white; margin-bottom: 10px;">Humpback Safari</h1>
-            <p style="font-size: 1.5rem; color: var(--secondary-color); font-weight: 600;">The ultimate 3-hour marine adventure</p>
+            <h1 id="tour-title" style="font-size: 4rem; color: white; margin-bottom: 10px;">Humpback Safari</h1>
+            <p id="tour-tagline" style="font-size: 1.5rem; color: var(--secondary-color); font-weight: 600;">The ultimate 3-hour marine adventure</p>
+        </div>
+    </section>
+
+    <!-- Related Image & Description Section -->
+    <section class="tour-visual-info" style="padding: 60px 0; background: white;">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <div class="visual-img-container" style="max-width: 900px; margin: 0 auto 40px; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow);">
+                    <img id="related-img" src="assets/images/Humpback Safari.png.jpg" alt="Tour Visual" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                </div>
+                <div class="visual-text" style="max-width: 800px; margin: 0 auto;">
+                    <p id="tour-desc" style="font-size: 1.25rem; color: var(--light-text); line-height: 1.8;">A 3-hour journey dedicated to finding and observing the majestic humpback whales.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -57,8 +70,8 @@
                 <h2>Tour Itinerary</h2>
                 <p>What to expect during your journey.</p>
             </div>
-            <div class="timeline" style="max-width: 800px; margin: 0 auto; position: relative;">
-                <div class="timeline-line" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--secondary-color); transform: translateX(-50%);"></div>
+            <div class="itinerary-timeline" style="max-width: 800px; margin: 0 auto; position: relative;">
+                <div class="timeline-line" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--secondary-color); opacity: 0.3;"></div>
                 
                 <div class="timeline-item reveal" style="display: flex; justify-content: flex-start; margin-bottom: 50px; position: relative;">
                     <div style="width: 45%; text-align: right; padding-right: 30px;">
@@ -94,22 +107,22 @@
                 <h2>Our Vessel: The Blue Horizon</h2>
                 <p>Designed for comfort, stability, and eco-efficiency.</p>
             </div>
-            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
-                <div class="feature-card reveal" style="text-align: center;">
-                    <i class="fas fa-wifi" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
-                    <h4>Free Onboard Wi-Fi</h4>
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px;">
+                <div class="feature-card reveal" style="text-align: center; background: var(--card-bg); padding: 40px 20px; border-radius: 20px; box-shadow: var(--shadow); transition: var(--transition); cursor: default;" onmouseenter="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)';" onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow)';">
+                    <i class="fas fa-wifi" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 20px; display: block;"></i>
+                    <h4 style="font-size: 1.2rem; color: var(--primary-color);">Free Onboard Wi-Fi</h4>
                 </div>
-                <div class="feature-card reveal" style="text-align: center;">
-                    <i class="fas fa-coffee" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
-                    <h4>Refreshment Bar</h4>
+                <div class="feature-card reveal" style="text-align: center; background: var(--card-bg); padding: 40px 20px; border-radius: 20px; box-shadow: var(--shadow); transition: var(--transition); cursor: default;" onmouseenter="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)';" onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow)';">
+                    <i class="fas fa-coffee" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 20px; display: block;"></i>
+                    <h4 style="font-size: 1.2rem; color: var(--primary-color);">Refreshment Bar</h4>
                 </div>
-                <div class="feature-card reveal" style="text-align: center;">
-                    <i class="fas fa-binoculars" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
-                    <h4>Observation Decks</h4>
+                <div class="feature-card reveal" style="text-align: center; background: var(--card-bg); padding: 40px 20px; border-radius: 20px; box-shadow: var(--shadow); transition: var(--transition); cursor: default;" onmouseenter="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)';" onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow)';">
+                    <i class="fas fa-binoculars" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 20px; display: block;"></i>
+                    <h4 style="font-size: 1.2rem; color: var(--primary-color);">Observation Decks</h4>
                 </div>
-                <div class="feature-card reveal" style="text-align: center;">
-                    <i class="fas fa-couch" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
-                    <h4>Climate Controlled Cabin</h4>
+                <div class="feature-card reveal" style="text-align: center; background: var(--card-bg); padding: 40px 20px; border-radius: 20px; box-shadow: var(--shadow); transition: var(--transition); cursor: default;" onmouseenter="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)';" onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow)';">
+                    <i class="fas fa-couch" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 20px; display: block;"></i>
+                    <h4 style="font-size: 1.2rem; color: var(--primary-color);">Climate Controlled Cabin</h4>
                 </div>
             </div>
         </div>
@@ -147,7 +160,7 @@
                     <div style="margin-bottom: 20px;">
                         <input type="email" placeholder="Email Address" required style="width: 100%; padding: 15px; border-radius: 5px; border: none;">
                     </div>
-                    <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+                    <div class="booking-row" style="display: flex; gap: 20px; margin-bottom: 20px;">
                         <input type="date" required style="flex: 1; padding: 15px; border-radius: 5px; border: none;">
                         <input type="number" placeholder="Guests" min="1" required style="flex: 1; padding: 15px; border-radius: 5px; border: none;">
                     </div>
@@ -159,18 +172,15 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-wave">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#001F3F" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,192C672,213,768,203,864,181.3C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-        </div>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="logo"><i class="fas fa-whale"></i> MarineTours</h3>
+                    <h3 class="logo"><img src="assets/images/website-logo.png" alt="Logo" style="height: 30px; margin-right: 10px;"> MarineTours</h3>
                     <p>Pioneering sustainable marine tourism for over 15 years. Join us in protecting our oceans.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+
                         <a href="#"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
@@ -180,7 +190,7 @@
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Our Tours</a></li>
-                        <li><a href="blog.html">Latest News</a></li>
+                        <li><a href="tour.html">Expedition Details</a></li>
                         <li><a href="pricing.html">Pricing Plans</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
@@ -209,6 +219,116 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tourData = {
+                'humpback': {
+                    title: 'Humpback Safari',
+                    tagline: 'The ultimate 3-hour marine adventure',
+                    heroImg: 'assets/images/Humpback Safari.png.jpg',
+                    relatedImg: 'assets/images/Humpback Safari.png.jpg',
+                    desc: 'A 3-hour journey dedicated to finding and observing the majestic humpback whales. Known for their acrobatic breaches and complex songs, humpback whales are the stars of this expedition.'
+                },
+                'blue-whale': {
+                    title: 'Blue Whale Quest',
+                    tagline: 'Deep-sea mission to spot the giants',
+                    heroImg: 'assets/images/Blue Whale Quest.png.jpg',
+                    relatedImg: 'assets/images/Blue Whale Quest.png.jpg',
+                    desc: 'Join us on a deep-sea mission to spot the largest mammal on the planet during peak season. This tour takes you further offshore to the feeding grounds of these magnificent gentle giants.'
+                },
+                'gray-whale': {
+                    title: 'Gray Whale Migration',
+                    tagline: 'Witness the epic coastal journey',
+                    heroImg: 'https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=2000',
+                    relatedImg: 'https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=800',
+                    desc: 'Witness the incredible journey of gray whales as they pass along our coastline. These whales are known for their curiosity and the massive scale of their annual migration from Alaska to Mexico.'
+                },
+                'orca': {
+                    title: 'Orca Encounter',
+                    tagline: 'Meet the intelligence of the ocean',
+                    heroImg: 'assets/images/Orca Encounter.png.jpg',
+                    relatedImg: 'assets/images/Orca Encounter.png.jpg',
+                    desc: 'Track the highly intelligent resident orcas in their natural habitat with our expert guides. Learn about their complex social structures and hunting techniques in the wild.'
+                },
+                'platinum': {
+                    title: 'Platinum Whale Watch',
+                    tagline: 'The pinnacle of marine luxury',
+                    heroImg: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=2000',
+                    relatedImg: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800',
+                    desc: 'Small group size, premium catering, and expert-led commentary on our flagship catamaran.'
+                },
+                'research': {
+                    title: 'Private Research Aid',
+                    tagline: 'Contribute to science firsthand',
+                    heroImg: 'assets/images/Private Research Aid.png.jpg',
+                    relatedImg: 'assets/images/Private Research Aid.png.jpg',
+                    desc: 'Join a real research mission and contribute to marine conservation efforts firsthand.'
+                },
+                'sunset': {
+                    title: 'VIP Sunset Soiree',
+                    tagline: 'Golden hour with the giants',
+                    heroImg: 'assets/images/VIP Sunset Soiree.png.jpg',
+                    relatedImg: 'assets/images/VIP Sunset Soiree.png.jpg',
+                    desc: "Champagne, hor d'oeuvres, and the world's best sunset sightings of humpback whales."
+                },
+                'family': {
+                    title: 'Elite Family Charter',
+                    tagline: 'Exclusive memories for your loved ones',
+                    heroImg: 'assets/images/Elite Family Charter.png.jpg',
+                    relatedImg: 'assets/images/Elite Family Charter.png.jpg',
+                    desc: 'A fully private vessel for your family, complete with a private chef and education host.'
+                },
+                'group-eco': {
+                    title: 'Group Eco-Tours',
+                    tagline: 'Shared passion for the deep sea',
+                    heroImg: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=2000',
+                    relatedImg: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800',
+                    desc: 'Join a shared expedition led by marine biologists to witness whales in their natural habitat.'
+                },
+                'dolphin-sunset': {
+                    title: 'Sunset Dolphin Cruise',
+                    tagline: 'Magical evenings on the water',
+                    heroImg: 'assets/images/Sunset Dolphin Cruise.png',
+                    relatedImg: 'assets/images/Sunset Dolphin Cruise.png',
+                    desc: 'Enjoy a magical evening on the water as dolphins play in the golden wake of our eco-yacht.'
+                },
+                'family-discovery': {
+                    title: 'Family Ocean Discovery',
+                    tagline: 'Education and fun for all ages',
+                    heroImg: 'assets/images/Family Ocean Discovery.png',
+                    relatedImg: 'assets/images/Family Ocean Discovery.png',
+                    desc: 'An educational journey perfect for all ages, featuring interactive touch pools and hydrophone listening.'
+                },
+                'yacht-charter': {
+                    title: 'Private Yacht Charter',
+                    tagline: 'Tailored luxury expeditions',
+                    heroImg: 'assets/images/Private Yacht Charter.png',
+                    relatedImg: 'assets/images/Private Yacht Charter.png',
+                    desc: 'Tailored luxury expeditions for private groups looking for an exclusive marine adventure.'
+                }
+            };
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const tourKey = urlParams.get('tour');
+
+            if (tourKey && tourData[tourKey]) {
+                const data = tourData[tourKey];
+                
+                // Update Hero
+                document.getElementById('tour-title').textContent = data.title;
+                document.getElementById('tour-tagline').textContent = data.tagline;
+                document.getElementById('hero-section').style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${data.heroImg}')`;
+                
+                // Update Related Content
+                document.getElementById('related-img').src = data.relatedImg;
+                document.getElementById('related-img').alt = data.title;
+                document.getElementById('tour-desc').textContent = data.desc;
+                
+                // Update Document Title
+                document.title = `${data.title} | Whale Watching & Marine Eco-Tours`;
+            }
+        });
+    </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/png" href="assets/images/website-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -16,7 +19,7 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="logo">
-                    <i class="fas fa-whale"></i>
+                    <img src="assets/images/website-logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
                     <span>MarineTours</span>
                 </a>
                 <ul class="nav-links">
@@ -24,14 +27,16 @@
                     <li><a href="home-2.html">Home 2</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="tour.html">Tour</a></li>
                     <li><a href="pricing.html" class="active">Pricing</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li class="nav-action-items">
+                        <button id="darkModeToggle" class="toggle-btn"><i class="fas fa-moon"></i></button>
+                        <button id="rtlToggle" class="toggle-btn"><i class="fas fa-right-left"></i></button>
+                        <a href="login.html" class="btn btn-primary">Login</a>
+                    </li>
                 </ul>
                 <div class="nav-actions">
-                    <a href="login.html" class="btn btn-primary">Login</a>
-                    <button id="darkModeToggle" class="toggle-btn"><i class="fas fa-moon"></i></button>
-                    <button id="rtlToggle" class="toggle-btn"><i class="fas fa-language"></i></button>
                     <div class="hamburger">
                         <span></span>
                         <span></span>
@@ -43,10 +48,12 @@
     </header>
 
     <!-- Pricing Hero -->
-    <section class="page-hero" style="background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('https://images.unsplash.com/photo-1505144808419-1957a94ca61e?auto=format&fit=crop&q=80&w=2000'); padding: 100px 0; color: white; text-align: center;">
+    <section class="page-hero"
+        style="background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('https://images.unsplash.com/photo-1505144808419-1957a94ca61e?auto=format&fit=crop&q=80&w=2000'); padding: 160px 0; color: white; text-align: center;">
         <div class="container reveal">
             <h1 style="font-size: 3.5rem; color: white;">Tour Packages & Pricing</h1>
-            <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto;">Choose the perfect expedition for your budget and group size.</p>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto;">Choose the perfect expedition for your
+                budget and group size.</p>
         </div>
     </section>
 
@@ -58,61 +65,68 @@
                 <p>All prices include marine biologist commentary and onboard refreshments.</p>
             </div>
             <div class="card-grid">
-                <div class="card reveal" style="border: 2px solid #eee;">
-                    <div class="card-body" style="text-align: center;">
-                        <i class="fas fa-user" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
+                <div class="card reveal" style="border: 2px solid #eee; display: flex; flex-direction: column;">
+                    <div class="card-body" style="text-align: center; flex-grow: 1; display: flex; flex-direction: column;">
                         <h3>Standard Adult</h3>
-                        <p style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 10px;">$85</p>
+                        <p
+                            style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 10px;">
+                            $85</p>
                         <p style="margin-bottom: 20px;">Single 3-hour expedition seat.</p>
-                        <ul style="text-align: left; margin-bottom: 30px; list-style: none;">
+                        <ul style="text-align: left; margin-bottom: 30px; list-style: none; flex-grow: 1;">
                             <li><i class="fas fa-check" style="color: green;"></i> Guided Experience</li>
                             <li><i class="fas fa-check" style="color: green;"></i> Onboard Wi-Fi</li>
                             <li><i class="fas fa-check" style="color: green;"></i> Photo Opportunities</li>
                         </ul>
-                        <a href="services-details.html" class="btn btn-primary" style="width: 100%;">Book Ticket</a>
+                        <a href="services-details.html" class="btn btn-primary" style="width: 100%; margin-top: auto;">Book Ticket</a>
                     </div>
                 </div>
-                <div class="card reveal" style="border: 2px solid var(--secondary-color); transform: scale(1.05); z-index: 1;">
-                    <div class="card-body" style="text-align: center;">
-                        <div style="position: absolute; top: 10px; right: 10px; background: var(--accent-color); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem;">POPULAR</div>
-                        <i class="fas fa-users" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
+                <div class="card reveal"
+                    style="border: 2px solid var(--secondary-color); z-index: 1; display: flex; flex-direction: column;">
+                    <div class="card-body" style="text-align: center; flex-grow: 1; display: flex; flex-direction: column;">
+                        <div
+                            style="position: absolute; top: 10px; right: 10px; background: var(--accent-color); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem;">
+                            POPULAR</div>
                         <h3>Family Bundle</h3>
-                        <p style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 10px;">$250</p>
+                        <p
+                            style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 10px;">
+                            $250</p>
                         <p style="margin-bottom: 20px;">2 Adults + 2 Children (under 12).</p>
-                        <ul style="text-align: left; margin-bottom: 30px; list-style: none;">
+                        <ul style="text-align: left; margin-bottom: 30px; list-style: none; flex-grow: 1;">
                             <li><i class="fas fa-check" style="color: green;"></i> Guided Experience</li>
                             <li><i class="fas fa-check" style="color: green;"></i> Educational Materials</li>
                             <li><i class="fas fa-check" style="color: green;"></i> Family Photo Pack</li>
                         </ul>
-                        <a href="services-details.html" class="btn btn-accent" style="width: 100%;">Book Ticket</a>
+                        <a href="services-details.html" class="btn btn-accent" style="width: 100%; margin-top: auto;">Book Ticket</a>
                     </div>
                 </div>
-                <div class="card reveal" style="border: 2px solid #eee;">
-                    <div class="card-body" style="text-align: center;">
-                        <i class="fas fa-camera" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
+                <div class="card reveal" style="border: 2px solid #eee; display: flex; flex-direction: column;">
+                    <div class="card-body" style="text-align: center; flex-grow: 1; display: flex; flex-direction: column;">
                         <h3>Photography Pro</h3>
-                        <p style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 10px;">$120</p>
+                        <p
+                            style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 10px;">
+                            $120</p>
                         <p style="margin-bottom: 20px;">Priority positioning for photographers.</p>
-                        <ul style="text-align: left; margin-bottom: 30px; list-style: none;">
+                        <ul style="text-align: left; margin-bottom: 30px; list-style: none; flex-grow: 1;">
                             <li><i class="fas fa-check" style="color: green;"></i> Pro Gear Support</li>
                             <li><i class="fas fa-check" style="color: green;"></i> Longer Station Times</li>
                             <li><i class="fas fa-check" style="color: green;"></i> Expert Lighting Tips</li>
                         </ul>
-                        <a href="services-details.html" class="btn btn-primary" style="width: 100%;">Book Ticket</a>
+                        <a href="services-details.html" class="btn btn-primary" style="width: 100%; margin-top: auto;">Book Ticket</a>
                     </div>
                 </div>
-                <div class="card reveal" style="border: 2px solid #eee;">
-                    <div class="card-body" style="text-align: center;">
-                        <i class="fas fa-crown" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
+                <div class="card reveal" style="border: 2px solid #eee; display: flex; flex-direction: column;">
+                    <div class="card-body" style="text-align: center; flex-grow: 1; display: flex; flex-direction: column;">
                         <h3>VIP Explorer</h3>
-                        <p style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 10px;">$199</p>
+                        <p
+                            style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 10px;">
+                            $199</p>
                         <p style="margin-bottom: 20px;">Private cabin and gourmet catering.</p>
-                        <ul style="text-align: left; margin-bottom: 30px; list-style: none;">
+                        <ul style="text-align: left; margin-bottom: 30px; list-style: none; flex-grow: 1;">
                             <li><i class="fas fa-check" style="color: green;"></i> Private Host</li>
                             <li><i class="fas fa-check" style="color: green;"></i> Champagne Welcome</li>
                             <li><i class="fas fa-check" style="color: green;"></i> Luxury Amenities</li>
                         </ul>
-                        <a href="services-details.html" class="btn btn-primary" style="width: 100%;">Book Ticket</a>
+                        <a href="services-details.html" class="btn btn-primary" style="width: 100%; margin-top: auto;">Book Ticket</a>
                     </div>
                 </div>
             </div>
@@ -124,12 +138,15 @@
         <div class="container">
             <div class="story-layout" style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
                 <div class="story-img reveal" style="flex: 1; min-width: 300px;">
-                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800" style="border-radius: 20px;">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800"
+                        style="border-radius: 20px;">
                 </div>
                 <div class="story-text reveal" style="flex: 1; min-width: 300px;">
                     <h2>Group Discounts</h2>
-                    <p style="color: var(--light-text); margin-bottom: 20px;">We offer special rates for groups of 10 or more. Perfect for schools, corporate teams, and community groups.</p>
-                    <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; border-left: 5px solid var(--secondary-color);">
+                    <p style="color: var(--light-text); margin-bottom: 20px;">We offer special rates for groups of 10 or
+                        more. Perfect for schools, corporate teams, and community groups.</p>
+                    <div
+                        style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; border-left: 5px solid var(--secondary-color);">
                         <p style="margin: 0; font-weight: 600;">Groups 10-20: Save 15%</p>
                         <p style="margin: 0; font-weight: 600;">Groups 21+: Save 25%</p>
                     </div>
@@ -146,29 +163,34 @@
                 <h2>Current Offers</h2>
                 <p>Limited time deals for the adventurous souls.</p>
             </div>
-            <div class="offers-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px;">
-                <div class="offer-card glass reveal" style="background: var(--primary-color); color: white; padding: 40px; border-radius: 15px; position: relative; overflow: hidden;">
+            <div class="offers-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px;">
+                <div class="offer-card glass reveal"
+                    style="background: var(--primary-color); color: white; padding: 40px; border-radius: 15px; position: relative; overflow: hidden;">
                     <div style="position: relative; z-index: 2;">
-                        <h3>Early Bird Special</h3>
-                        <p>Book 30 days in advance and get 10% off any tour package.</p>
-                        <p style="font-weight: 700; margin-top: 20px;">PROMO CODE: EARLYBIRD</p>
+                        <h3 style="color: white;">Early Bird Special</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Book 30 days in advance and get 10% off any tour package.</p>
+                        <p style="font-weight: 700; margin-top: 20px; color: white;">PROMO CODE: EARLYBIRD</p>
                     </div>
-                    <i class="fas fa-percentage" style="position: absolute; bottom: -20px; right: -20px; font-size: 10rem; opacity: 0.1;"></i>
+                    <i class="fas fa-percentage"
+                        style="position: absolute; bottom: -20px; right: -20px; font-size: 10rem; opacity: 0.1;"></i>
                 </div>
-                <div class="offer-card glass reveal" style="background: var(--secondary-color); color: white; padding: 40px; border-radius: 15px; position: relative; overflow: hidden;">
+                <div class="offer-card glass reveal"
+                    style="background: var(--secondary-color); color: white; padding: 40px; border-radius: 15px; position: relative; overflow: hidden;">
                     <div style="position: relative; z-index: 2;">
-                        <h3>Weekday Wanderer</h3>
-                        <p>Book a tour between Mon-Thu and receive a free high-res photo pack.</p>
-                        <p style="font-weight: 700; margin-top: 20px;">PROMO CODE: WEEKDAY</p>
+                        <h3 style="color: white;">Weekday Wanderer</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Book a tour between Mon-Thu and receive a free high-res photo pack.</p>
+                        <p style="font-weight: 700; margin-top: 20px; color: white;">PROMO CODE: WEEKDAY</p>
                     </div>
-                    <i class="fas fa-gift" style="position: absolute; bottom: -20px; right: -20px; font-size: 10rem; opacity: 0.1;"></i>
+                    <i class="fas fa-gift"
+                        style="position: absolute; bottom: -20px; right: -20px; font-size: 10rem; opacity: 0.1;"></i>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Booking CTA -->
-    <section class="final-cta" style="padding: 100px 0; background: #001F3F; color: white; text-align: center;">
+    <section class="final-cta" style="padding: 100px 0; background: #001F3F; color: white; text-align: center; margin-bottom: 80px;">
         <div class="container reveal">
             <h2 style="color: white; margin-bottom: 20px;">Ready to Book Your Journey?</h2>
             <p style="font-size: 1.2rem; margin-bottom: 40px;">Select your date and join us on the next expedition.</p>
@@ -178,18 +200,15 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-wave">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#001F3F" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,192C672,213,768,203,864,181.3C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-        </div>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="logo"><i class="fas fa-whale"></i> MarineTours</h3>
+                    <h3 class="logo"><img src="assets/images/website-logo.png" alt="Logo" style="height: 30px; margin-right: 10px;"> MarineTours</h3>
                     <p>Pioneering sustainable marine tourism for over 15 years. Join us in protecting our oceans.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+
                         <a href="#"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
@@ -199,7 +218,7 @@
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Our Tours</a></li>
-                        <li><a href="blog.html">Latest News</a></li>
+                        <li><a href="tour.html">Expedition Details</a></li>
                         <li><a href="pricing.html">Pricing Plans</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
@@ -223,11 +242,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Whale Watching & Marine Eco-Tours. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: var(--accent-color);"></i></p>
+                <p>&copy; 2026 Whale Watching & Marine Eco-Tours. All Rights Reserved. | Designed with <i
+                        class="fas fa-heart" style="color: var(--accent-color);"></i></p>
             </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Tour Experience | Whale Watching & Marine Eco-Tours</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/png" href="assets/images/website-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="assets/images/website-logo.png" alt="Logo"
+                        style="height: 40px;"><span>MarineTours</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="home-2.html">Home 2</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tour.html" class="active">Tour</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="nav-action-items">
+                        <button id="darkModeToggle" class="toggle-btn"><i class="fas fa-moon"></i></button>
+                        <button id="rtlToggle" class="toggle-btn"><i class="fas fa-right-left"></i></button>
+                        <a href="login.html" class="btn btn-primary">Login</a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero"
+        style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; padding: 160px 0; color: white; text-align: center;">
+        <div class="container reveal">
+            <h1 style="font-size: 4rem; color: white; margin-bottom: 20px;">The Ultimate Expedition</h1>
+            <p style="font-size: 1.4rem; max-width: 800px; margin: 0 auto 30px;">A 3-hour immersive journey into the
+                heart of the Pacific sanctuary.</p>
+            <a href="pricing.html" class="btn btn-accent">Reserve Your Seat</a>
+        </div>
+    </section>
+
+    <!-- Section 2: Interactive Itinerary -->
+    <section class="itinerary" style="padding: var(--section-padding); background: white; position: relative; overflow: hidden;">
+        <!-- Background Decorations -->
+        <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0, 168, 204, 0.05) 0%, transparent 70%); border-radius: 50%;"></div>
+        <div style="position: absolute; bottom: -100px; left: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255, 127, 80, 0.05) 0%, transparent 70%); border-radius: 50%;"></div>
+
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Tour Itinerary</h2>
+                <p>Every minute is designed for discovery and wonder.</p>
+            </div>
+            
+            <div class="itinerary-wrapper" style="max-width: 1000px; margin: 0 auto; position: relative;">
+                <!-- Vertical Line Connector -->
+                <div class="timeline-line" style="position: absolute; left: 42px; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color), var(--accent-color)); border-radius: 2px; opacity: 0.3;"></div>
+
+                <div class="itinerary-timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item reveal" style="display: flex; gap: 40px; margin-bottom: 60px; position: relative;">
+                        <div class="timeline-circle" style="background: var(--primary-color); color: white; width: 84px; height: 84px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700; z-index: 2; box-shadow: 0 10px 20px rgba(0, 51, 102, 0.2); border: 4px solid white;">
+                            <i class="fas fa-ship" style="font-size: 1.2rem; margin-bottom: 5px;"></i>
+                            <span style="font-size: 0.8rem;">0-30m</span>
+                        </div>
+                        <div class="timeline-content" style="background: var(--bg-light); padding: 30px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); flex: 1; transition: var(--transition); box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                            <h3 style="color: var(--primary-color); margin-bottom: 10px; font-size: 1.5rem;">Eco-Briefing & Launch</h3>
+                            <p style="color: var(--light-text); font-size: 1.05rem; line-height: 1.7;">Meet your captain and marine biologists at the dock for a comprehensive safety and species briefing before we set sail on our eco-hybrid vessel.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item reveal" style="display: flex; gap: 40px; margin-bottom: 60px; position: relative;">
+                        <div class="timeline-circle" style="background: var(--secondary-color); color: white; width: 84px; height: 84px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700; z-index: 2; box-shadow: 0 10px 20px rgba(0, 168, 204, 0.2); border: 4px solid white;">
+                            <i class="fas fa-binoculars" style="font-size: 1.2rem; margin-bottom: 5px;"></i>
+                            <span style="font-size: 0.8rem;">1-2h</span>
+                        </div>
+                        <div class="timeline-content" style="background: var(--bg-light); padding: 30px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); flex: 1; transition: var(--transition); box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                            <h3 style="color: var(--secondary-color); margin-bottom: 10px; font-size: 1.5rem;">The Sighting Grounds</h3>
+                            <p style="color: var(--light-text); font-size: 1.05rem; line-height: 1.7;">Navigate to prime migration corridors. Our experts use hydrophones and real-time data to locate humpback whales and dolphin pods.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item reveal" style="display: flex; gap: 40px; position: relative;">
+                        <div class="timeline-circle" style="background: var(--accent-color); color: white; width: 84px; height: 84px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700; z-index: 2; box-shadow: 0 10px 20px rgba(255, 127, 80, 0.2); border: 4px solid white;">
+                            <i class="fas fa-anchor" style="font-size: 1.2rem; margin-bottom: 5px;"></i>
+                            <span style="font-size: 0.8rem;">3h</span>
+                        </div>
+                        <div class="timeline-content" style="background: var(--bg-light); padding: 30px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); flex: 1; transition: var(--transition); box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                            <h3 style="color: var(--accent-color); margin-bottom: 10px; font-size: 1.5rem;">The Return Voyage</h3>
+                            <p style="color: var(--light-text); font-size: 1.05rem; line-height: 1.7;">A relaxing cruise back to shore with refreshments, a Q&A session with our scientists, and photo sharing opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Premium Vessel Showcase -->
+    <section class="vessel-showcase" style="padding: 100px 0; background: #001529; color: white; position: relative; overflow: hidden;">
+        <!-- Background Ambient Light -->
+        <div style="position: absolute; top: 20%; left: 10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0, 168, 204, 0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(50px);"></div>
+        
+        <div class="container">
+            <div class="vessel-grid" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center;">
+                <div class="vessel-text reveal">
+                    <span style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 3px; display: block; margin-bottom: 20px;">The Engineering of Silence</span>
+                    <h2 style="font-size: 3.5rem; color: white; margin-bottom: 25px; line-height: 1.1;">The "Ocean Whisper" Eco-Hybrid</h2>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem; margin-bottom: 40px; line-height: 1.8;">Experience the future of marine exploration. Our custom-built vessel combines luxury with cutting-edge electric-hybrid technology, allowing us to glide silently beside marine giants without disturbing their natural behavior.</p>
+                    
+                    <div class="spec-cards-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                        <div class="spec-card" style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); transition: var(--transition);">
+                            <i class="fas fa-bolt" style="color: var(--secondary-color); font-size: 1.5rem; margin-bottom: 15px; display: block;"></i>
+                            <h4 style="color: white; margin-bottom: 8px;">Hybrid Power</h4>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Zero-emission silent cruising mode.</p>
+                        </div>
+                        <div class="spec-card" style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); transition: var(--transition);">
+                            <i class="fas fa-eye" style="color: var(--secondary-color); font-size: 1.5rem; margin-bottom: 15px; display: block;"></i>
+                            <h4 style="color: white; margin-bottom: 8px;">360° Views</h4>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Unobstructed panoramic viewing decks.</p>
+                        </div>
+                        <div class="spec-card" style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); transition: var(--transition);">
+                            <i class="fas fa-microscope" style="color: var(--secondary-color); font-size: 1.5rem; margin-bottom: 15px; display: block;"></i>
+                            <h4 style="color: white; margin-bottom: 8px;">Research Lab</h4>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Onboard data collection for scientists.</p>
+                        </div>
+                        <div class="spec-card" style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); transition: var(--transition);">
+                            <i class="fas fa-shield-alt" style="color: var(--secondary-color); font-size: 1.5rem; margin-bottom: 15px; display: block;"></i>
+                            <h4 style="color: white; margin-bottom: 8px;">Safety First</h4>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Advanced stabilization & radar systems.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vessel-image-container reveal vessel-3d-container" style="position: relative;">
+                    <div style="position: absolute; top: -20px; left: -20px; right: 20px; bottom: 20px; border: 2px solid var(--secondary-color); border-radius: 30px; z-index: 0; opacity: 0.3;"></div>
+                    <img src="assets/images/vessel.png" alt="Eco-Hybrid Vessel" class="vessel-3d-img" style="width: 100%; height: auto; border-radius: 30px; position: relative; z-index: 1; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+                    <!-- Floating Badge -->
+                    <div class="vessel-badge" style="position: absolute; bottom: 40px; right: -30px; background: var(--accent-color); color: white; padding: 20px 30px; border-radius: 50px; z-index: 2; box-shadow: 0 10px 20px rgba(0,0,0,0.3); font-weight: 700;">
+                        Eco-Innovation Award 2026
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: What's Included (Grid Layout) -->
+    <section class="inclusions" style="padding: var(--section-padding); background: white;">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>What's Included</h2>
+                <p>We take care of everything so you can focus on the experience.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px;">
+                <div class="reveal"
+                    style="text-align: center; padding: 30px; border: 1px solid #eee; border-radius: 15px;">
+                    <i class="fas fa-coffee"
+                        style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px; display: block;"></i>
+                    <h3>Snacks & Drinks</h3>
+                    <p style="font-size: 0.9rem; color: var(--light-text);">Local organic snacks and hot/cold beverages
+                        provided throughout the tour.</p>
+                </div>
+                <div class="reveal"
+                    style="text-align: center; padding: 30px; border: 1px solid #eee; border-radius: 15px;">
+                    <i class="fas fa-binoculars"
+                        style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px; display: block;"></i>
+                    <h3>Premium Gear</h3>
+                    <p style="font-size: 0.9rem; color: var(--light-text);">High-quality Nikon binoculars and waterproof
+                        ponchos for every guest.</p>
+                </div>
+                <div class="reveal"
+                    style="text-align: center; padding: 30px; border: 1px solid #eee; border-radius: 15px;">
+                    <i class="fas fa-camera-retro"
+                        style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px; display: block;"></i>
+                    <h3>Digital Photos</h3>
+                    <p style="font-size: 0.9rem; color: var(--light-text);">Professional photos of your tour shared via
+                        our secure cloud portal.</p>
+                </div>
+                <div class="reveal"
+                    style="text-align: center; padding: 30px; border: 1px solid #eee; border-radius: 15px;">
+                    <i class="fas fa-shield-virus"
+                        style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px; display: block;"></i>
+                    <h3>Full Insurance</h3>
+                    <p style="font-size: 0.9rem; color: var(--light-text);">Comprehensive passenger insurance and safety
+                        equipment included.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Marine Impact Scene (Non-Card 3D Layout) -->
+    <section class="marine-impact-scene" style="padding: 120px 0; background: #000b1a; color: white; position: relative; overflow: hidden; height: 800px; display: flex; align-items: center;">
+        <!-- Deep Sea Parallax Backgrounds -->
+        <div style="position: absolute; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #001f3f 0%, #000b1a 100%); z-index: 0;"></div>
+        
+        <!-- Floating Light Orbs -->
+        <div class="light-orb" style="position: absolute; width: 300px; height: 300px; background: rgba(0, 168, 204, 0.1); border-radius: 50%; filter: blur(80px); top: 10%; left: 20%; animation: orbit 20s linear infinite;"></div>
+        <div class="light-orb" style="position: absolute; width: 400px; height: 400px; background: rgba(255, 127, 80, 0.05); border-radius: 50%; filter: blur(100px); bottom: 10%; right: 10%; animation: orbit 25s linear reverse infinite;"></div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="scene-header reveal" style="text-align: center; margin-bottom: 80px;">
+                <h2 style="color: white; font-size: 3.5rem; margin-bottom: 20px;">Mission: Depths of Discovery</h2>
+                <p style="color: rgba(255,255,255,0.6); max-width: 700px; margin: 0 auto;">Beyond the tour, we are a voice for the ocean. Explore our pillars of conservation through this interactive depth-map.</p>
+            </div>
+
+            <div class="interactive-depth-map" style="position: relative; height: 400px; perspective: 2000px;">
+                <!-- Floating Element 1: Research -->
+                <div class="floating-impact reveal" style="position: absolute; left: 10%; top: 0; transform: translateZ(100px);">
+                    <div class="impact-inner" style="display: flex; align-items: center; gap: 20px; background: rgba(255,255,255,0.03); padding: 25px 40px; border-radius: 100px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); transition: all 0.5s ease;">
+                        <i class="fas fa-microscope" style="font-size: 2rem; color: var(--secondary-color);"></i>
+                        <div>
+                            <h4 style="color: white; margin: 0; font-size: 1.2rem;">Citizen Research</h4>
+                            <p style="color: rgba(255,255,255,0.5); margin: 0; font-size: 0.9rem;">5k+ Sightings Logged</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Element 2: Funding -->
+                <div class="floating-impact reveal" style="position: absolute; right: 15%; top: 50px; transform: translateZ(200px);">
+                    <div class="impact-inner" style="display: flex; align-items: center; gap: 20px; background: rgba(255,255,255,0.03); padding: 25px 40px; border-radius: 100px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); transition: all 0.5s ease;">
+                        <i class="fas fa-hand-holding-heart" style="font-size: 2rem; color: var(--accent-color);"></i>
+                        <div>
+                            <h4 style="color: white; margin: 0; font-size: 1.2rem;">Ocean Funding</h4>
+                            <p style="color: rgba(255,255,255,0.5); margin: 0; font-size: 0.9rem;">2% Revenue Donation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Element 3: Zero Waste -->
+                <div class="floating-impact reveal" style="position: absolute; left: 25%; bottom: 20px; transform: translateZ(150px);">
+                    <div class="impact-inner" style="display: flex; align-items: center; gap: 20px; background: rgba(255,255,255,0.03); padding: 25px 40px; border-radius: 100px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); transition: all 0.5s ease;">
+                        <i class="fas fa-seedling" style="font-size: 2rem; color: #2ecc71;"></i>
+                        <div>
+                            <h4 style="color: white; margin: 0; font-size: 1.2rem;">Zero Waste</h4>
+                            <p style="color: rgba(255,255,255,0.5); margin: 0; font-size: 0.9rem;">100% Plastic-Free</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Element 4: Education -->
+                <div class="floating-impact reveal" style="position: absolute; right: 30%; bottom: 40px; transform: translateZ(50px);">
+                    <div class="impact-inner" style="display: flex; align-items: center; gap: 20px; background: rgba(255,255,255,0.03); padding: 25px 40px; border-radius: 100px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); transition: all 0.5s ease;">
+                        <i class="fas fa-graduation-cap" style="font-size: 2rem; color: #f1c40f;"></i>
+                        <div>
+                            <h4 style="color: white; margin: 0; font-size: 1.2rem;">Education</h4>
+                            <p style="color: rgba(255,255,255,0.5); margin: 0; font-size: 0.9rem;">10k Students Taught</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="logo"><img src="assets/images/website-logo.png" alt="Logo"
+                            style="height: 30px; margin-right: 10px;"> MarineTours</h3>
+                    <p>Pioneering sustainable marine tourism for over 15 years. Join us in protecting our oceans.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Tours</a></li>
+                        <li><a href="tour.html">Expedition Details</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Tour Timings</h3>
+                    <ul>
+                        <li>Morning: 08:00 AM</li>
+                        <li>Midday: 12:00 PM</li>
+                        <li>Sunset: 04:30 PM</li>
+                        <li>Private: Flexible</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Get updates on sightings and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-accent"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Whale Watching & Marine Eco-Tours. All Rights Reserved. | Designed with <i
+                        class="fas fa-heart" style="color: var(--accent-color);"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

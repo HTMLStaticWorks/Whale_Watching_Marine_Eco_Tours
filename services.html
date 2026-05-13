@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/png" href="assets/images/website-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -15,23 +16,22 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">
-                    <i class="fas fa-whale"></i>
-                    <span>MarineTours</span>
-                </a>
+                <a href="index.html" class="logo"><img src="assets/images/website-logo.png" alt="Logo" style="height: 40px;"><span>MarineTours</span></a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home 1</a></li>
                     <li><a href="home-2.html">Home 2</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="tour.html">Tour</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li class="nav-action-items">
+                        <button id="darkModeToggle" class="toggle-btn"><i class="fas fa-moon"></i></button>
+                        <button id="rtlToggle" class="toggle-btn"><i class="fas fa-right-left"></i></button>
+                        <a href="login.html" class="btn btn-primary">Login</a>
+                    </li>
                 </ul>
                 <div class="nav-actions">
-                    <a href="login.html" class="btn btn-primary">Login</a>
-                    <button id="darkModeToggle" class="toggle-btn"><i class="fas fa-moon"></i></button>
-                    <button id="rtlToggle" class="toggle-btn"><i class="fas fa-language"></i></button>
                     <div class="hamburger">
                         <span></span>
                         <span></span>
@@ -43,7 +43,7 @@
     </header>
 
     <!-- Hero Banner -->
-    <section class="page-hero" style="background: linear-gradient(rgba(0,168,204,0.8), rgba(0,168,204,0.8)), url('https://images.unsplash.com/photo-1544552866-d3ed42536cfd?auto=format&fit=crop&q=80&w=2000'); padding: 100px 0; color: white; text-align: center;">
+    <section class="page-hero" style="background: linear-gradient(rgba(0,168,204,0.8), rgba(0,168,204,0.8)), url('https://images.unsplash.com/photo-1544552866-d3ed42536cfd?auto=format&fit=crop&q=80&w=2000'); padding: 160px 0; color: white; text-align: center;">
         <div class="container reveal">
             <h1 style="font-size: 3.5rem; color: white;">Explore Our Expeditions</h1>
             <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto;">From whale watching to scientific research support, discover our range of marine services.</p>
@@ -59,19 +59,19 @@
             </div>
             <div class="card-grid">
                 <div class="card reveal">
-                    <div class="card-img"><img src="https://images.unsplash.com/photo-1550951160-843e936b9c97?auto=format&fit=crop&q=80&w=600"></div>
+                    <div class="card-img"><img src="assets/images/Humpback Safari.png.jpg"></div>
                     <div class="card-body">
                         <h3>Humpback Safari</h3>
                         <p>A 3-hour journey dedicated to finding and observing the majestic humpback whales.</p>
-                        <a href="services-details.html" class="btn btn-primary">Tour Details</a>
+                        <a href="services-details.html?tour=humpback" class="btn btn-primary">Tour Details</a>
                     </div>
                 </div>
                 <div class="card reveal">
-                    <div class="card-img"><img src="https://images.unsplash.com/photo-1520110120385-ad276ae77215?auto=format&fit=crop&q=80&w=600"></div>
+                    <div class="card-img"><img src="assets/images/Blue Whale Quest.png.jpg"></div>
                     <div class="card-body">
                         <h3>Blue Whale Quest</h3>
                         <p>Join us on a deep-sea mission to spot the largest mammal on the planet during peak season.</p>
-                        <a href="services-details.html" class="btn btn-primary">Tour Details</a>
+                        <a href="services-details.html?tour=blue-whale" class="btn btn-primary">Tour Details</a>
                     </div>
                 </div>
                 <div class="card reveal">
@@ -79,15 +79,15 @@
                     <div class="card-body">
                         <h3>Gray Whale Migration</h3>
                         <p>Witness the incredible journey of gray whales as they pass along our coastline.</p>
-                        <a href="services-details.html" class="btn btn-primary">Tour Details</a>
+                        <a href="services-details.html?tour=gray-whale" class="btn btn-primary">Tour Details</a>
                     </div>
                 </div>
                 <div class="card reveal">
-                    <div class="card-img"><img src="https://images.unsplash.com/photo-1454486840607-adc8b4bc1da0?auto=format&fit=crop&q=80&w=600"></div>
+                    <div class="card-img"><img src="assets/images/Orca Encounter.png.jpg"></div>
                     <div class="card-body">
                         <h3>Orca Encounter</h3>
                         <p>Track the highly intelligent resident orcas in their natural habitat with our expert guides.</p>
-                        <a href="services-details.html" class="btn btn-primary">Tour Details</a>
+                        <a href="services-details.html?tour=orca" class="btn btn-primary">Tour Details</a>
                     </div>
                 </div>
             </div>
@@ -143,18 +143,15 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-wave">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#001F3F" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,192C672,213,768,203,864,181.3C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-        </div>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="logo"><i class="fas fa-whale"></i> MarineTours</h3>
+                    <h3 class="logo"><img src="assets/images/website-logo.png" alt="Logo" style="height: 30px; margin-right: 10px;"> MarineTours</h3>
                     <p>Pioneering sustainable marine tourism for over 15 years. Join us in protecting our oceans.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+
                         <a href="#"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
@@ -164,7 +161,7 @@
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Our Tours</a></li>
-                        <li><a href="blog.html">Latest News</a></li>
+                        <li><a href="tour.html">Expedition Details</a></li>
                         <li><a href="pricing.html">Pricing Plans</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>

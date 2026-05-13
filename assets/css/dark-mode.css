@@ -1,45 +1,129 @@
 /* Dark Mode Overrides */
 body.dark-mode {
     --bg-light: #000D1A;
+    --bg-dark-blue: #001F3F;
     --text-color: #E0E0E0;
     --light-text: #B0B0B0;
     --card-bg: #001F3F;
     --nav-bg: rgba(0, 13, 26, 0.95);
     --white: #FFFFFF;
-    --primary-color: #00A8CC; /* Swap for better contrast */
+    --primary-color: #00A8CC;
 }
 
-body.dark-mode h1, 
-body.dark-mode h2, 
-body.dark-mode h3, 
-body.dark-mode h4 {
-    color: var(--white);
+/* Global Section Overrides */
+body.dark-mode section {
+    background-color: var(--bg-light) !important;
+    background-image: none; /* Remove light-mode specific background images if any */
+}
+
+/* Specific Section & Container Backgrounds */
+body.dark-mode .adventures,
+body.dark-mode .eco-innovation,
+body.dark-mode .journey,
+body.dark-mode .premium-experience,
+body.dark-mode .company-story,
+body.dark-mode .conservation-mission,
+body.dark-mode .team,
+body.dark-mode .gallery,
+body.dark-mode .itinerary,
+body.dark-mode .inclusions,
+body.dark-mode .testimonials,
+body.dark-mode .pricing-cards,
+body.dark-mode .discounts,
+body.dark-mode .seasonal-offers {
+    background: var(--bg-light) !important;
+    background-color: var(--bg-light) !important;
+}
+
+/* Component Overrides */
+body.dark-mode .premium-info-card,
+body.dark-mode .premium-info-card .card-content,
+body.dark-mode details,
+body.dark-mode summary,
+body.dark-mode .faq-accordion details,
+body.dark-mode .card,
+body.dark-mode .team-card,
+body.dark-mode .calendar-card,
+body.dark-mode .testi-card,
+body.dark-mode .timeline-content,
+body.dark-mode .mission-grid,
+body.dark-mode .spec-card,
+body.dark-mode .impact-inner,
+body.dark-mode .sust-item,
+body.dark-mode .innovation-text > div,
+body.dark-mode .booking-panel,
+body.dark-mode .itinerary-timeline .timeline-content {
+    background-color: var(--bg-dark-blue) !important;
+    background: var(--bg-dark-blue) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-color) !important;
+}
+
+/* Text Visibility Fixes */
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li,
+body.dark-mode label,
+body.dark-mode .timeline-content p,
+body.dark-mode .card-body p,
+body.dark-mode .story-text p,
+body.dark-mode .innovation-text p,
+body.dark-mode .footer-section p {
+    color: var(--light-text) !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode summary,
+body.dark-mode .section-title h2,
+body.dark-mode .card-body h3,
+body.dark-mode .timeline-content h3 {
+    color: var(--white) !important;
+}
+
+/* Fix for the large numbers in Journey section */
+body.dark-mode .journey div[style*="font-size: 5rem"] {
+    color: rgba(0, 168, 204, 0.3) !important;
+}
+
+/* Form Elements */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #001326 !important;
+    color: var(--white) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Buttons */
+body.dark-mode .btn-primary {
+    background-color: var(--secondary-color) !important;
+    color: #000D1A !important;
+}
+
+/* Glassmorphism */
+body.dark-mode .glass,
+body.dark-mode .btn-glass {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Navbar */
+body.dark-mode header {
+    background: var(--nav-bg) !important;
 }
 
 body.dark-mode .nav-links {
-    background: #001F3F;
+    background: var(--bg-dark-blue) !important;
 }
 
-body.dark-mode .btn-primary {
-    background-color: var(--secondary-color);
-    color: #000D1A;
+
+body.dark-mode .nav-action-items {
+    border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-body.dark-mode .card {
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-body.dark-mode .footer-bottom {
-    border-top-color: rgba(255,255,255,0.05);
-}
-
-body.dark-mode input, 
-body.dark-mode textarea {
-    background: #001326;
-    color: var(--white);
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-body.dark-mode .glass {
-    background: rgba(0, 0, 0, 0.4);
-}

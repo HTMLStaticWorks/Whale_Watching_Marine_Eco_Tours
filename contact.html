@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/png" href="assets/images/website-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -16,7 +19,7 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="logo">
-                    <i class="fas fa-whale"></i>
+                    <img src="assets/images/website-logo.png" alt="Logo" style="height: 40px;">
                     <span>MarineTours</span>
                 </a>
                 <ul class="nav-links">
@@ -24,14 +27,16 @@
                     <li><a href="home-2.html">Home 2</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="tour.html">Tour</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
+                    <li class="nav-action-items">
+                        <button id="darkModeToggle" class="toggle-btn"><i class="fas fa-moon"></i></button>
+                        <button id="rtlToggle" class="toggle-btn"><i class="fas fa-right-left"></i></button>
+                        <a href="login.html" class="btn btn-primary">Login</a>
+                    </li>
                 </ul>
                 <div class="nav-actions">
-                    <a href="login.html" class="btn btn-primary">Login</a>
-                    <button id="darkModeToggle" class="toggle-btn"><i class="fas fa-moon"></i></button>
-                    <button id="rtlToggle" class="toggle-btn"><i class="fas fa-language"></i></button>
                     <div class="hamburger">
                         <span></span>
                         <span></span>
@@ -43,61 +48,45 @@
     </header>
 
     <!-- Hero Banner -->
-    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=2000'); padding: 100px 0; color: white; text-align: center;">
+    <section class="page-hero"
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=2000'); padding: 160px 0; color: white; text-align: center;">
         <div class="container reveal">
             <h1 style="font-size: 3.5rem; color: white;">Get in Touch</h1>
-            <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto;">Have questions about our tours or conservation work? We're here to help.</p>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto;">Have questions about our tours or
+                conservation work? We're here to help.</p>
         </div>
     </section>
 
-    <!-- Contact Information -->
-    <section class="contact-info" style="padding: var(--section-padding);">
-        <div class="container">
-            <div class="info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                <div class="info-card reveal" style="text-align: center; padding: 40px; background: white; border-radius: 15px; box-shadow: var(--shadow);">
-                    <i class="fas fa-map-marker-alt" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
-                    <h3>Our Location</h3>
-                    <p>123 Ocean Pier, Marine Village, <br> CA 90210, USA</p>
-                </div>
-                <div class="info-card reveal" style="text-align: center; padding: 40px; background: white; border-radius: 15px; box-shadow: var(--shadow);">
-                    <i class="fas fa-phone-alt" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
-                    <h3>Call Us</h3>
-                    <p>+1 (555) 123-4567 <br> +1 (555) 987-6543</p>
-                </div>
-                <div class="info-card reveal" style="text-align: center; padding: 40px; background: white; border-radius: 15px; box-shadow: var(--shadow);">
-                    <i class="fas fa-envelope" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
-                    <h3>Email Us</h3>
-                    <p>info@marinetours.com <br> support@marinetours.com</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Google Maps Section -->
-    <section class="maps" style="height: 400px; width: 100%;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105844.757805175!2d-118.5283437!3d34.004128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4d74d3ea733%3A0xb11d8a9466245f32!2sSanta%20Monica%20Pier!5e0!3m2!1sen!2sus!4v1684000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
-
-    <!-- Contact Form -->
+    <!-- Contact Form Section -->
     <section class="contact-form-section" style="padding: var(--section-padding); background: var(--bg-light);">
         <div class="container">
             <div class="story-layout" style="display: flex; gap: 50px; flex-wrap: wrap;">
                 <div class="form-text reveal" style="flex: 1; min-width: 300px;">
                     <h2>Send Us a Message</h2>
-                    <p style="color: var(--light-text); margin-bottom: 30px;">Fill out the form below and our team will get back to you within 24 hours.</p>
+                    <p style="color: var(--light-text); margin-bottom: 30px;">Fill out the form below and our team will
+                        get back to you within 24 hours.</p>
                     <div style="margin-bottom: 20px;">
                         <h4>Business Hours:</h4>
                         <p>Mon - Fri: 08:00 AM - 06:00 PM</p>
                         <p>Sat - Sun: 07:00 AM - 07:00 PM</p>
                     </div>
+                    <div class="social-links-contact">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 <div class="form-container reveal" style="flex: 1; min-width: 300px;">
-                    <form class="glass" style="padding: 40px; background: white; border-radius: 15px; box-shadow: var(--shadow);">
+                    <form class="glass"
+                        style="padding: 40px; background: white; border-radius: 15px; box-shadow: var(--shadow);">
                         <div style="margin-bottom: 20px;">
-                            <input type="text" placeholder="Your Name" required style="width: 100%; padding: 15px; border-radius: 5px; border: 1px solid #ddd;">
+                            <input type="text" placeholder="Your Name" required
+                                style="width: 100%; padding: 15px; border-radius: 5px; border: 1px solid #ddd;">
                         </div>
                         <div style="margin-bottom: 20px;">
-                            <input type="email" placeholder="Your Email" required style="width: 100%; padding: 15px; border-radius: 5px; border: 1px solid #ddd;">
+                            <input type="email" placeholder="Your Email" required
+                                style="width: 100%; padding: 15px; border-radius: 5px; border: 1px solid #ddd;">
                         </div>
                         <div style="margin-bottom: 20px;">
                             <select style="width: 100%; padding: 15px; border-radius: 5px; border: 1px solid #ddd;">
@@ -108,10 +97,69 @@
                             </select>
                         </div>
                         <div style="margin-bottom: 20px;">
-                            <textarea placeholder="Your Message" required rows="5" style="width: 100%; padding: 15px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
+                            <textarea placeholder="Your Message" required rows="5"
+                                style="width: 100%; padding: 15px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section class="maps" style="height: 400px; width: 100%;">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105844.757805175!2d-118.5283437!3d34.004128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4d74d3ea733%3A0xb11d8a9466245f32!2sSanta%20Monica%20Pier!5e0!3m2!1sen!2sus!4v1684000000000!5m2!1sen!2sus"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Premium Contact Information (Full Bleed Images) -->
+    <section class="contact-info-premium" style="padding: 100px 0; background: #fdfdfd;">
+        <div class="container">
+            <div class="info-grid-horizontal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
+                <!-- Our Location -->
+                <div class="premium-info-card reveal" style="background: white; border-radius: 20px; overflow: hidden; border: 1px solid #eef2f6; box-shadow: 0 15px 45px rgba(0,0,0,0.07); text-align: center; display: flex; flex-direction: column; transition: transform 0.3s ease;">
+                    <div class="card-image-box" style="width: 100%; height: 200px; margin-bottom: 0;">
+                        <img src="assets/images/our location.png" alt="Location" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-content" style="padding: 25px;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 8px; color: var(--primary-color);">Our Location</h3>
+                        <p style="font-size: 0.9rem; color: var(--light-text); line-height: 1.5;">123 Ocean Pier, Marine Village, <br> CA 90210, USA</p>
+                    </div>
+                </div>
+
+                <!-- Call Us -->
+                <div class="premium-info-card reveal" style="background: white; border-radius: 20px; overflow: hidden; border: 1px solid #eef2f6; box-shadow: 0 15px 45px rgba(0,0,0,0.07); text-align: center; display: flex; flex-direction: column; transition: transform 0.3s ease;">
+                    <div class="card-image-box" style="width: 100%; height: 200px; margin-bottom: 0;">
+                        <img src="assets/images/call us.png" alt="Call" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-content" style="padding: 25px;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 8px; color: var(--primary-color);">Call Us</h3>
+                        <p style="font-size: 0.9rem; color: var(--light-text); line-height: 1.5;">+1 (555) 123-4567 <br> +1 (555) 987-6543</p>
+                    </div>
+                </div>
+
+                <!-- Email Us -->
+                <div class="premium-info-card reveal" style="background: white; border-radius: 20px; overflow: hidden; border: 1px solid #eef2f6; box-shadow: 0 15px 45px rgba(0,0,0,0.07); text-align: center; display: flex; flex-direction: column; transition: transform 0.3s ease;">
+                    <div class="card-image-box" style="width: 100%; height: 200px; margin-bottom: 0;">
+                        <img src="assets/images/email us.png" alt="Email" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-content" style="padding: 25px;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 8px; color: var(--primary-color);">Email Us</h3>
+                        <p style="font-size: 0.9rem; color: var(--light-text); line-height: 1.5;">info@marinetours.com <br> support@marinetours.com</p>
+                    </div>
+                </div>
+
+                <!-- Live Support -->
+                <div class="premium-info-card reveal" style="background: white; border-radius: 20px; overflow: hidden; border: 1px solid #eef2f6; box-shadow: 0 15px 45px rgba(0,0,0,0.07); text-align: center; display: flex; flex-direction: column; transition: transform 0.3s ease;">
+                    <div class="card-image-box" style="width: 100%; height: 200px; margin-bottom: 0;">
+                        <img src="assets/images/live support.png.png" alt="Live Chat" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-content" style="padding: 25px;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 8px; color: var(--primary-color);">Live Support</h3>
+                        <p style="font-size: 0.9rem; color: var(--light-text); line-height: 1.5;">WhatsApp: +1 (555) 000-1111 <br> Available 24/7</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,37 +172,54 @@
                 <h2>Frequently Asked Questions</h2>
                 <p>Quick answers to common questions.</p>
             </div>
-            <div class="faq-grid" style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item reveal" style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
-                    <h4 style="margin-bottom: 10px;">What happens if we don't see any whales?</h4>
-                    <p style="color: var(--light-text);">While we have a 98% sighting rate, wildlife is unpredictable. If no whales are spotted, we offer a 'Whale Guarantee' voucher for a future tour.</p>
-                </div>
-                <div class="faq-item reveal" style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
-                    <h4 style="margin-bottom: 10px;">Are the tours safe for young children?</h4>
-                    <p style="color: var(--light-text);">Yes, our vessels are designed with safety in mind for all ages. We provide child-sized life jackets and have enclosed cabins.</p>
-                </div>
-                <div class="faq-item reveal" style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
-                    <h4 style="margin-bottom: 10px;">Do you provide food on the boat?</h4>
-                    <p style="color: var(--light-text);">We provide light snacks and water. Our VIP and private tours offer gourmet catering options.</p>
-                </div>
+            <div class="faq-accordion" style="max-width: 800px; margin: 0 auto;">
+                <details class="reveal" style="background: white; margin-bottom: 15px; border-radius: 12px; border: 1px solid #eef2f6; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                    <summary style="padding: 20px 25px; cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; color: var(--primary-color);">
+                        What happens if we don't see any whales?
+                        <i class="fas fa-chevron-down" style="font-size: 0.9rem; transition: transform 0.3s ease;"></i>
+                    </summary>
+                    <div style="padding: 0 25px 25px; color: var(--light-text); line-height: 1.6;">
+                        While we have a 98% sighting rate, wildlife is unpredictable.
+                        If no whales are spotted, we offer a 'Whale Guarantee' voucher for a future tour.
+                    </div>
+                </details>
+
+                <details class="reveal" style="background: white; margin-bottom: 15px; border-radius: 12px; border: 1px solid #eef2f6; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                    <summary style="padding: 20px 25px; cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; color: var(--primary-color);">
+                        Are the tours safe for young children?
+                        <i class="fas fa-chevron-down" style="font-size: 0.9rem; transition: transform 0.3s ease;"></i>
+                    </summary>
+                    <div style="padding: 0 25px 25px; color: var(--light-text); line-height: 1.6;">
+                        Yes, our vessels are designed with safety in mind for all ages.
+                        We provide child-sized life jackets and have enclosed cabins.
+                    </div>
+                </details>
+
+                <details class="reveal" style="background: white; margin-bottom: 15px; border-radius: 12px; border: 1px solid #eef2f6; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                    <summary style="padding: 20px 25px; cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; color: var(--primary-color);">
+                        Do you provide food on the boat?
+                        <i class="fas fa-chevron-down" style="font-size: 0.9rem; transition: transform 0.3s ease;"></i>
+                    </summary>
+                    <div style="padding: 0 25px 25px; color: var(--light-text); line-height: 1.6;">
+                        We provide light snacks and water. Our VIP and private tours
+                        offer gourmet catering options.
+                    </div>
+                </details>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-wave">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#001F3F" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,192C672,213,768,203,864,181.3C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-        </div>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="logo"><i class="fas fa-whale"></i> MarineTours</h3>
+                    <h3 class="logo"><img src="assets/images/website-logo.png" alt="Logo" style="height: 30px; margin-right: 10px;"> MarineTours</h3>
                     <p>Pioneering sustainable marine tourism for over 15 years. Join us in protecting our oceans.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+
                         <a href="#"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
@@ -164,7 +229,7 @@
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Our Tours</a></li>
-                        <li><a href="blog.html">Latest News</a></li>
+                        <li><a href="tour.html">Expedition Details</a></li>
                         <li><a href="pricing.html">Pricing Plans</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
@@ -188,11 +253,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Whale Watching & Marine Eco-Tours. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: var(--accent-color);"></i></p>
+                <p>&copy; 2026 Whale Watching & Marine Eco-Tours. All Rights Reserved. | Designed with <i
+                        class="fas fa-heart" style="color: var(--accent-color);"></i></p>
             </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
