@@ -501,6 +501,20 @@ footer {
     .card-grid {
         grid-template-columns: 1fr;
     }
+
+    .team-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 350px !important;
+        margin: 0 auto !important;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .mission-grid {
+        flex-direction: column !important;
+    }
 }
 /* Itinerary Timeline Enhanced Styles */
 .itinerary-wrapper {
@@ -714,15 +728,7 @@ footer {
         display: inline-block !important;
     }
 
-    .team-grid {
-        grid-template-columns: 1fr !important;
-        max-width: 350px !important;
-        margin: 0 auto !important;
-    }
 
-    .mission-grid {
-        flex-direction: column !important;
-    }
 
     .itinerary-timeline {
         padding-left: 0 !important;

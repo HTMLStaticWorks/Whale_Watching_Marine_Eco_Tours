@@ -11,10 +11,9 @@ body.dark-mode {
 }
 
 /* Global Section Overrides */
-body.dark-mode section {
+body.dark-mode section:not(.hero-home-1):not(.hero-home-2):not(.page-hero):not(.service-hero):not(.video-feature):not(.cta-premium):not(.safety-immersive) {
     background-color: var(--bg-light) !important;
     background-image: none;
-    /* Remove light-mode specific background images if any */
 }
 
 /* Specific Section & Container Backgrounds */
@@ -84,6 +83,28 @@ body.dark-mode .section-title h2,
 body.dark-mode .card-body h3,
 body.dark-mode .timeline-content h3 {
     color: var(--white) !important;
+}
+
+/* Hero Section Text Visibility Fix */
+body.dark-mode .hero-home-1 p,
+body.dark-mode .hero-home-2 p,
+body.dark-mode .page-hero p,
+body.dark-mode .service-hero p,
+body.dark-mode .video-feature p,
+body.dark-mode .cta-premium p,
+body.dark-mode .safety-immersive p {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+body.dark-mode .hero-home-1,
+body.dark-mode .hero-home-2,
+body.dark-mode .page-hero,
+body.dark-mode .service-hero,
+body.dark-mode .video-feature,
+body.dark-mode .cta-premium,
+body.dark-mode .safety-immersive {
+    background-color: rgba(0,0,0,0.5) !important; /* Ensure a dark overlay if image fails */
 }
 
 /* Fix for the large numbers in Journey section */
