@@ -85,6 +85,7 @@ img {
 
 .btn-primary:hover {
     background-color: var(--secondary-color);
+    color: var(--white) !important;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 168, 204, 0.4);
 }
@@ -96,6 +97,7 @@ img {
 
 .btn-accent:hover {
     background-color: #ff6347;
+    color: var(--white) !important;
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 10px 20px rgba(255, 127, 80, 0.4);
 }
@@ -109,6 +111,7 @@ img {
 
 .btn-glass:hover {
     background: rgba(255, 255, 255, 0.2);
+    color: var(--white) !important;
     border-color: var(--white);
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
@@ -472,6 +475,26 @@ footer {
     .section-title h2 {
         font-size: 2rem;
     }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Center Newsletter in Footer at 1024px */
+    .footer-section:last-child {
+        grid-column: 1 / -1;
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .newsletter-form {
+        align-items: center;
+    }
 }
 
 @media (max-width: 767px) {
@@ -679,7 +702,7 @@ footer {
         flex: 1 1 120px;
     }
 
-    .stat-number {
+    .stat-number, .stat-symbol {
         font-size: 2.2rem !important;
     }
 
@@ -1031,5 +1054,48 @@ footer {
         width: 45px;
         height: 45px;
         font-size: 1.1rem;
+    }
+}
+
+.stat-number, .stat-symbol {
+    font-size: 3rem;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.stat-symbol {
+    margin-left: 2px;
+}
+
+/* Tablet Adjustments */
+@media (max-width: 1024px) {
+    .interactive-depth-map {
+        height: auto !important;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        perspective: none !important;
+        padding: 20px;
+    }
+    .floating-impact {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+    }
+    .impact-inner {
+        width: 100%;
+        justify-content: center;
+    }
+    .inclusions-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .inclusions-grid {
+        grid-template-columns: 1fr !important;
     }
 }

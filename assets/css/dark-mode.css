@@ -13,7 +13,8 @@ body.dark-mode {
 /* Global Section Overrides */
 body.dark-mode section {
     background-color: var(--bg-light) !important;
-    background-image: none; /* Remove light-mode specific background images if any */
+    background-image: none;
+    /* Remove light-mode specific background images if any */
 }
 
 /* Specific Section & Container Backgrounds */
@@ -50,7 +51,7 @@ body.dark-mode .mission-grid,
 body.dark-mode .spec-card,
 body.dark-mode .impact-inner,
 body.dark-mode .sust-item,
-body.dark-mode .innovation-text > div,
+body.dark-mode .innovation-text>div,
 body.dark-mode .booking-panel,
 body.dark-mode .itinerary-timeline .timeline-content {
     background-color: var(--bg-dark-blue) !important;
@@ -127,3 +128,14 @@ body.dark-mode .nav-action-items {
     border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
+/* About Page Mission Icons */
+body.dark-mode .mission-card img {
+    filter: invert(1) !important;
+    mix-blend-mode: screen !important;
+}
+
+/* Tour Page Timeline Fix */
+body.dark-mode .timeline-circle span,
+body.dark-mode .timeline-circle i {
+    color: white !important;
+}
