@@ -4,7 +4,7 @@
     /* Color Palette */
     --primary-color: #003366; /* Deep Blue */
     --secondary-color: #00A8CC; /* Aqua */
-    --accent-color: #FF7F50; /* Soft Coral */
+    --accent-color: #007BFF; /* Vivid Blue */
     --text-color: #333333;
     --light-text: #666666;
     --white: #FFFFFF;
@@ -96,10 +96,10 @@ img {
 }
 
 .btn-accent:hover {
-    background-color: #ff6347;
+    background-color: #0056b3;
     color: var(--white) !important;
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(255, 127, 80, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.4);
 }
 
 .btn-glass {
@@ -222,7 +222,7 @@ nav {
     gap: 15px;
     margin-left: 20px;
     padding-left: 20px;
-    border-left: 1px solid rgba(0,0,0,0.1);
+    border-left: none;
 }
 
 /* Footer */
@@ -859,9 +859,22 @@ footer {
     }
 
     .auth-meta {
-        flex-direction: column !important;
-        gap: 10px !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
         align-items: center !important;
+    }
+    .auth-meta label, .auth-meta a {
+        white-space: nowrap !important;
+        font-size: 0.75rem !important;
+    }
+    .auth-meta label {
+        display: flex !important;
+        align-items: center !important;
+        gap: 5px !important;
+    }
+    .auth-meta input[type="checkbox"] {
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .social-auth-btns {
@@ -1104,4 +1117,27 @@ footer {
     .inclusions-grid {
         grid-template-columns: 1fr !important;
     }
+}
+
+
+
+
+/* Global fix for auth-meta alignment */
+.auth-meta {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+.auth-meta label, .auth-meta a {
+    white-space: nowrap !important;
+    font-size: 0.8rem;
+}
+.auth-meta label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+}
+.auth-meta input[type="checkbox"] {
+    margin: 0 !important;
+    padding: 0 !important;
 }

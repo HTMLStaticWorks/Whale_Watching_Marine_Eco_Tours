@@ -9,6 +9,50 @@
     <link rel="stylesheet" href="assets/css/rtl.css">
     <link rel="icon" type="image/png" href="assets/images/website-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .sust-item {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        @media (max-width: 600px) {
+            .sust-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            .sust-item p {
+                text-align: center;
+            }
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .team-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: top center;
+        }
+        @media (max-width: 1024px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                justify-items: center;
+            }
+            .team-card {
+                max-width: 350px;
+                width: 100%;
+            }
+        }
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -19,10 +63,11 @@
                 <a href="index.html" class="logo"><img src="assets/images/website-logo.png" alt="Logo" style="height: 40px;"><span>MarineTours</span></a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home 1</a></li>
+                    
                     <li><a href="home-2.html">Home 2</a></li>
+                    <li><a href="tour.html">Tour</a></li>
                     <li><a href="about.html" class="active">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="tour.html">Tour</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li class="nav-action-items">
@@ -105,30 +150,30 @@
                 <h2>Meet the Experts</h2>
                 <p>Led by captains with decades of experience on these waters.</p>
             </div>
-            <div class="team-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; justify-content: center;">
+            <div class="team-grid" >
                 <div class="team-card reveal" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600" style="width: 100%; height: 300px;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600" >
                     <div style="padding: 25px; text-align: center;">
                         <h3 style="margin-bottom: 10px; font-size: 1.4rem;">Capt. James Cook</h3>
                         <p style="color: var(--secondary-color); font-weight: 600; font-size: 0.95rem;">Senior Expedition Leader</p>
                     </div>
                 </div>
                 <div class="team-card reveal" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=600" style="width: 100%; height: 300px; object-fit: cover;">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=600" >
                     <div style="padding: 25px; text-align: center;">
                         <h3 style="margin-bottom: 10px; font-size: 1.4rem;">Dr. Sarah Jenkins</h3>
                         <p style="color: var(--secondary-color); font-weight: 600; font-size: 0.95rem;">Lead Marine Biologist</p>
                     </div>
                 </div>
                 <div class="team-card reveal" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600" style="width: 100%; height: 300px;">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600" >
                     <div style="padding: 25px; text-align: center;">
                         <h3 style="margin-bottom: 10px; font-size: 1.4rem;">Capt. Mark Evans</h3>
                         <p style="color: var(--secondary-color); font-weight: 600; font-size: 0.95rem;">Safety Officer</p>
                     </div>
                 </div>
                 <div class="team-card reveal" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" style="width: 100%; height: 300px; object-fit: cover;">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" >
                     <div style="padding: 25px; text-align: center;">
                         <h3 style="margin-bottom: 10px; font-size: 1.4rem;">Dr. Elena Rodriguez</h3>
                         <p style="color: var(--secondary-color); font-weight: 600; font-size: 0.95rem;">Conservation Scientist</p>
@@ -146,19 +191,19 @@
                 <p>We set the benchmark for sustainable whale watching.</p>
             </div>
             <div class="sust-list" style="max-width: 800px; margin: 40px auto 0;">
-                <div class="sust-item reveal" style="display: flex; align-items: center; gap: 25px; margin-bottom: 25px;">
+                <div class="sust-item reveal" >
                     <i class="fas fa-recycle" style="font-size: 1.8rem; color: var(--secondary-color); width: 40px; text-align: center;"></i>
                     <p style="margin: 0; font-size: 1.1rem; flex: 1;">We provide filtered water and reusable containers for all onboard snacks to eliminate single-use plastics.</p>
                 </div>
-                <div class="sust-item reveal" style="display: flex; align-items: center; gap: 25px; margin-bottom: 25px;">
+                <div class="sust-item reveal" >
                     <i class="fas fa-bolt" style="font-size: 1.8rem; color: var(--secondary-color); width: 40px; text-align: center;"></i>
                     <p style="margin: 0; font-size: 1.1rem; flex: 1;">Our vessels utilize advanced solar panels to power onboard electronics and energy-efficient lighting.</p>
                 </div>
-                <div class="sust-item reveal" style="display: flex; align-items: center; gap: 25px; margin-bottom: 25px;">
+                <div class="sust-item reveal" >
                     <i class="fas fa-leaf" style="font-size: 1.8rem; color: var(--secondary-color); width: 40px; text-align: center;"></i>
                     <p style="margin: 0; font-size: 1.1rem; flex: 1;">We exclusively use eco-certified, biodegradable cleaning supplies to protect the delicate marine water quality.</p>
                 </div>
-                <div class="sust-item reveal" style="display: flex; align-items: center; gap: 25px; margin-bottom: 25px;">
+                <div class="sust-item reveal" >
                     <i class="fas fa-shield-alt" style="font-size: 1.8rem; color: var(--secondary-color); width: 40px; text-align: center;"></i>
                     <p style="margin: 0; font-size: 1.1rem; flex: 1;">Strict adherence to no-wake zones and international distance regulations ensures stress-free whale encounters.</p>
                 </div>
@@ -252,3 +297,8 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+

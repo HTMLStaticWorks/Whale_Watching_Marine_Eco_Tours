@@ -10,6 +10,154 @@
     <link rel="stylesheet" href="assets/css/rtl.css">
     <link rel="icon" type="image/png" href="assets/images/website-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+        .primary-text { color: var(--primary-color); }
+        body.dark-mode .primary-text { color: white !important; }
+        
+        .cta-premium { background: white; color: #333; }
+        body.dark-mode .cta-premium { background: linear-gradient(135deg, #001F3F, #003366) !important; color: white !important; }
+        
+        /* Modern Luxury Grid */
+        .modern-luxury-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .modern-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 450px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            display: block;
+            text-decoration: none;
+        }
+        
+        .modern-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+        }
+        
+        .modern-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        
+        .modern-card:hover img {
+            transform: scale(1.08);
+        }
+        
+        .modern-card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 30px 30px;
+            background: linear-gradient(to top, rgba(0, 13, 26, 0.95) 0%, rgba(0, 13, 26, 0.6) 50%, transparent 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            z-index: 2;
+        }
+        
+        .modern-card h3 {
+            color: white !important;
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+        
+        .modern-card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            opacity: 0;
+            max-height: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            font-size: 0.95rem;
+            overflow: hidden;
+        }
+        
+        .modern-card:hover h3 {
+            transform: translateY(0);
+        }
+        
+        .modern-card:hover p {
+            opacity: 1;
+            max-height: 100px;
+            transform: translateY(0);
+        }
+        
+        .modern-card .btn-accent {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease 0.1s;
+            align-self: flex-start;
+            padding: 10px 25px;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+        
+        .modern-card:hover .btn-accent {
+            opacity: 1;
+            transform: translateY(0);
+        }
+            /* Spotlight Concept Effect */
+        .spotlight-grid {
+            transition: all 0.4s ease;
+        }
+        .spotlight-grid:hover .spotlight-card {
+            filter: brightness(0.5) grayscale(0.5);
+            transform: scale(0.98);
+        }
+        .spotlight-grid .spotlight-card {
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        .spotlight-grid .spotlight-card:hover {
+            filter: brightness(1.1) grayscale(0);
+            transform: scale(1.05);
+            z-index: 10;
+            box-shadow: 0 15px 35px rgba(0, 191, 255, 0.3);
+        }
+        
+        @media (max-width: 1024px) { .modern-luxury-grid { grid-template-columns: repeat(2, 1fr); } } @media (max-width: 576px) { .modern-luxury-grid { grid-template-columns: 1fr; } }                 /* Spotlight Concept Effect */
+        .spotlight-grid {
+            transition: all 0.4s ease;
+        }
+        .spotlight-grid:hover .spotlight-card {
+            filter: brightness(0.5) grayscale(0.5);
+            transform: scale(0.98);
+        }
+        .spotlight-grid .spotlight-card {
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        .spotlight-grid .spotlight-card:hover {
+            filter: brightness(1.1) grayscale(0);
+            transform: scale(1.05);
+            z-index: 10;
+            box-shadow: 0 15px 35px rgba(0, 191, 255, 0.3);
+        }
+        
+        @media (max-width: 1024px) {
+            .spotlight-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 576px) {
+            .spotlight-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -23,9 +171,9 @@
                 <ul class="nav-links">
                     <li><a href="index.html">Home 1</a></li>
                     <li><a href="home-2.html" class="active">Home 2</a></li>
+                    <li><a href="tour.html">Tour</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="tour.html">Tour</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li class="nav-action-items">
@@ -86,50 +234,45 @@
     </section>
 
     <!-- Luxury Eco Tour Packages (4 cards) -->
-    <section class="luxury-tours" style="padding: var(--section-padding); background: var(--bg-light);">
+    <section class="luxury-tours" style="padding: var(--section-padding); background: white;">
         <div class="container">
             <div class="section-title reveal">
-                <h2>Luxury Tour Packages</h2>
+                <h2><span class="primary-text">Luxury</span> <span style="color: var(--secondary-color) !important;">Tour Packages</span></h2>
                 <p>Curated experiences for the discerning explorer.</p>
             </div>
-            <div class="card-grid">
-                <div class="card reveal">
-                    <div class="card-img"><img
-                            src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=600"
-                            alt="Ultra Luxury"></div>
-                    <div class="card-body">
+                        <div class="modern-luxury-grid">
+                <a href="services-details.html?tour=platinum" class="modern-card reveal">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800" alt="Ultra Luxury">
+                    <div class="modern-card-content">
                         <h3>Platinum Whale Watch</h3>
                         <p>Small group size, premium catering, and expert-led commentary on our flagship catamaran.</p>
-                        <a href="services-details.html?tour=platinum" class="btn btn-primary">Experience Luxury</a>
+                        <span class="btn btn-accent">Discover</span>
                     </div>
-                </div>
-                <div class="card reveal">
-                    <div class="card-img"><img src="assets/images/Private Research Aid.png.jpg"
-                            alt="Private Research Aid"></div>
-                    <div class="card-body">
+                </a>
+                <a href="services-details.html?tour=research" class="modern-card reveal">
+                    <img src="assets/images/Private Research Aid.png.jpg" alt="Private Research Aid">
+                    <div class="modern-card-content">
                         <h3>Private Research Aid</h3>
                         <p>Join a real research mission and contribute to marine conservation efforts firsthand.</p>
-                        <a href="services-details.html?tour=research" class="btn btn-primary">Experience Luxury</a>
+                        <span class="btn btn-accent">Discover</span>
                     </div>
-                </div>
-                <div class="card reveal">
-                    <div class="card-img"><img src="assets/images/VIP Sunset Soiree.png.jpg" alt="VIP Sunset Soiree">
-                    </div>
-                    <div class="card-body">
+                </a>
+                <a href="services-details.html?tour=sunset" class="modern-card reveal">
+                    <img src="assets/images/VIP Sunset Soiree.png.jpg" alt="VIP Sunset Soiree">
+                    <div class="modern-card-content">
                         <h3>VIP Sunset Soiree</h3>
                         <p>Champagne, hor d'oeuvres, and the world's best sunset sightings of humpback whales.</p>
-                        <a href="services-details.html?tour=sunset" class="btn btn-primary">Experience Luxury</a>
+                        <span class="btn btn-accent">Discover</span>
                     </div>
-                </div>
-                <div class="card reveal">
-                    <div class="card-img"><img src="assets/images/Elite Family Charter.png.jpg"
-                            alt="Elite Family Charter"></div>
-                    <div class="card-body">
+                </a>
+                <a href="services-details.html?tour=family" class="modern-card reveal">
+                    <img src="assets/images/Elite Family Charter.png.jpg" alt="Elite Family Charter">
+                    <div class="modern-card-content">
                         <h3>Elite Family Charter</h3>
                         <p>A fully private vessel for your family, complete with a private chef and education host.</p>
-                        <a href="services-details.html?tour=family" class="btn btn-primary">Experience Luxury</a>
+                        <span class="btn btn-accent">Discover</span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -138,7 +281,7 @@
     <section class="species-spotlight" style="padding: var(--section-padding); background: white;">
         <div class="container">
             <div class="section-title reveal">
-                <h2>Species Spotlight</h2>
+                <h2><span class="primary-text">Species</span> <span style="color: var(--secondary-color) !important;">Spotlight</span></h2>
                 <p>Meet the inhabitants of our coastal waters.</p>
             </div>
             <div class="spotlight-grid"
@@ -186,7 +329,7 @@
 
     <!-- Safety Section - Full Width Immersive -->
     <section class="safety-immersive"
-        style="position: relative; padding: 120px 0; background: url('https://images.unsplash.com/photo-1544552866-d3ed42536cfd?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat fixed; color: white;">
+        style="position: relative; padding: 120px 0; background: #001f3f; color: white;">
         <div
             style="position: absolute; inset: 0; background: radial-gradient(circle, rgba(0, 31, 63, 0.6), rgba(0, 31, 63, 0.9));">
         </div>
@@ -235,7 +378,7 @@
     <section class="gallery" style="padding: var(--section-padding); background: white;">
         <div class="container">
             <div class="section-title reveal">
-                <h2>Ocean Moments</h2>
+                <h2><span class="primary-text">Ocean</span> <span style="color: var(--secondary-color) !important;">Moments</span></h2>
                 <p>A glimpse into the breathtaking encounters captured by our guests.</p>
             </div>
             <div class="gallery-grid"
@@ -285,9 +428,9 @@
 
     <!-- Unique Premium CTA Section -->
     <section class="cta-premium"
-        style="padding: 100px 0; background: linear-gradient(135deg, #001F3F, #003366); position: relative; overflow: hidden; text-align: center; color: white;">
+        style="padding: 100px 0; position: relative; overflow: hidden; text-align: center;">
         <div class="container reveal">
-            <h2 style="font-size: 4rem; color: white; margin-bottom: 30px;">Ready to Dive In?</h2>
+            <h2 style="font-size: 4rem; margin-bottom: 30px;"><span class="primary-text">Ready to</span> <span style="color: var(--secondary-color) !important;">Dive In?</span></h2>
             <p style="font-size: 1.5rem; margin-bottom: 40px; max-width: 800px; margin-inline: auto;">Join the thousands
                 of explorers who have seen the ocean through our eyes.</p>
             <div class="cta-stats"
@@ -362,3 +505,15 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

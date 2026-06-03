@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="icon" type="image/png" href="assets/images/website-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
+        <style>
         body {
-            background: linear-gradient(135deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-            background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+            background: linear-gradient(135deg, #f0f8ff 0%, #e0f0ff 100%);
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: var(--transition);
+        }
+        body.dark-mode {
+            background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
         }
 
         .register-card {
@@ -24,7 +27,18 @@
             max-width: 450px;
             padding: 40px;
             text-align: center;
+            color: #333;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+        body.dark-mode .register-card {
+            background: transparent;
             color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: none;
         }
 
         .register-card input {
@@ -32,28 +46,40 @@
             padding: 12px;
             margin-bottom: 15px;
             border-radius: 5px;
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #333;
+            transition: var(--transition);
+        }
+        body.dark-mode .register-card input {
             border: 1px solid rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.1);
+            background: transparent;
             color: white;
         }
 
-        .register-card input::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
+        .register-card input::placeholder { color: #999; }
+        body.dark-mode .register-card input::placeholder { color: rgba(255, 255, 255, 0.7); }
 
         .register-card .logo {
             justify-content: center;
             margin-bottom: 30px;
-            color: white;
+            color: var(--primary-color);
         }
+        body.dark-mode .register-card .logo { color: white; }
+        
+        .register-card h2 { color: var(--primary-color); }
+        body.dark-mode .register-card h2 { color: white !important; }
 
         .password-strength {
             height: 5px;
-            background: rgba(255, 255, 255, 0.1);
+            background: transparent;
             margin-bottom: 15px;
             border-radius: 5px;
             overflow: hidden;
             text-align: left;
+        }
+        body.dark-mode .password-strength {
+            background: transparent;
         }
 
         .strength-bar {
@@ -74,18 +100,17 @@
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
-            color: rgba(255, 255, 255, 0.7);
+            color: #666;
             z-index: 10;
         }
+        body.dark-mode .password-field i { color: rgba(255, 255, 255, 0.7); }
 
         .password-field input {
             padding-right: 45px !important;
             margin-bottom: 0 !important;
         }
         
-        .field-group {
-            margin-bottom: 15px;
-        }
+        .field-group { margin-bottom: 15px; }
 
         .auth-controls {
             position: fixed;
@@ -97,10 +122,9 @@
         }
 
         .auth-controls .toggle-btn {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
+            background: #fff;
+            border: 1px solid #ccc;
+            color: var(--primary-color);
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -109,12 +133,34 @@
             justify-content: center;
             cursor: pointer;
             transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        body.dark-mode .auth-controls .toggle-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            backdrop-filter: blur(5px);
+            box-shadow: none;
         }
 
         .auth-controls .toggle-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: #f0f0f0;
             transform: translateY(-3px);
         }
+        body.dark-mode .auth-controls .toggle-btn:hover { background: rgba(255, 255, 255, 0.2); }
+
+        .social-auth-btns button {
+            color: #333;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+        body.dark-mode .social-auth-btns button {
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+        }
+        .social-auth-btns button i { color: #333; }
+        body.dark-mode .social-auth-btns button i { color: white; }
 
         @media (max-width: 576px) {
             body {
@@ -130,6 +176,8 @@
                 padding-right: 20px !important;
             }
         }
+            .or-text { color: #666; }
+        body.dark-mode .or-text { color: rgba(255, 255, 255, 0.6); }
     </style>
 </head>
 
@@ -142,7 +190,7 @@
 
     <div class="register-card glass reveal">
         <a href="index.html" class="logo"><img src="assets/images/website-logo.png" alt="Logo" style="height: 50px; margin-bottom: 10px;"><span>MarineTours</span></a>
-        <h2 style="color: white; margin-bottom: 20px;">Join the Expedition</h2>
+        <h2 style="margin-bottom: 20px;">Join the Expedition</h2>
         <form action="index.html">
             <div class="field-group">
                 <input type="text" placeholder="First Name" required>
@@ -172,12 +220,12 @@
         </form>    
             <div style="display: flex; align-items: center; margin-bottom: 20px;">
                 <div style="flex: 1; height: 1px; background: rgba(255, 255, 255, 0.2);"></div>
-                <span style="padding: 0 10px; font-size: 0.8rem; color: rgba(255, 255, 255, 0.6);">OR SIGN UP WITH</span>
+                <span class="or-text" style="padding: 0 10px; font-size: 0.8rem;">OR SIGN UP WITH</span>
                 <div style="flex: 1; height: 1px; background: rgba(255, 255, 255, 0.2);"></div>
             </div>
 
             <div class="social-auth-btns" style="display: flex; gap: 10px; margin-bottom: 10px;">
-                <button type="button" class="btn btn-glass" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; font-size: 0.9rem;">
+                <button type="button" class="btn" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; font-size: 0.9rem;">
                     <svg width="18" height="18" viewBox="0 0 24 24">
                         <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                         <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -186,7 +234,7 @@
                     </svg>
                     Google
                 </button>
-                <button type="button" class="btn btn-glass" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; font-size: 0.9rem;">
+                <button type="button" class="btn" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; font-size: 0.9rem;">
                     <i class="fab fa-apple" style="font-size: 1.2rem;"></i>
                     Apple
                 </button>
@@ -228,3 +276,7 @@
 </body>
 
 </html>
+
+
+
+
