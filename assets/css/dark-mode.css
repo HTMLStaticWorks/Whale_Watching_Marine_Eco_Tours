@@ -51,6 +51,7 @@ body.dark-mode .spec-card,
 body.dark-mode .impact-inner,
 body.dark-mode .innovation-text>div,
 body.dark-mode .booking-panel,
+body.dark-mode .tour-card,
 body.dark-mode .itinerary-timeline .timeline-content {
     background-color: var(--bg-dark-blue) !important;
     background: var(--bg-dark-blue) !important;
